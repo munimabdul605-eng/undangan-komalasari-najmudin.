@@ -138,28 +138,8 @@
 <body class="min-h-screen flex justify-center selection:bg-champagne selection:text-burgundy">
   <!-- ==================== MOBILE-FIRST SHELL (MAX-WIDTH 480PX) ==================== -->
   <div class="relative w-full max-w-[480px] min-h-screen burgundy-canvas border-x border-cream/10 shadow-[0_0_60px_rgba(0,0,0,0.65)] flex flex-col overflow-x-hidden">
-    <!-- ==================== HEADER ==================== -->
-    <header class="sticky top-0 z-30 bg-burgundy/95 border-b border-cream/15 px-5 py-3 flex items-center justify-between gap-3">
-      <div class="min-w-0">
-        <p class="text-[9.5px] font-medium uppercase tracking-[0.22em] text-champagne truncate">
-          Komalasari &amp; Najmudin
-        </p>
-        <h1 class="font-display-medium text-lg sm:text-xl text-cream leading-tight truncate">
-          Generator Link Undangan
-        </h1>
-      </div>
-
-      <a
-        href="index.html"
-        class="min-h-[44px] px-3.5 py-2 rounded-full bg-cream hover:bg-cream-warm text-burgundy text-[10.5px] font-semibold uppercase tracking-[0.12em] inline-flex items-center gap-1.5 shrink-0 transition-colors"
-      >
-        <span>Lihat Undangan</span>
-        <span aria-hidden="true">&rsaquo;</span>
-      </a>
-    </header>
-
     <!-- ==================== MAIN CONTENT ==================== -->
-    <main class="flex-1 px-5 pt-6 pb-20 space-y-8">
+    <main class="flex-1 px-5 pt-7 pb-20 space-y-9">
       <!-- ==================== VINTAGE TICKET GENERATOR CARD ==================== -->
       <section aria-label="Formulir Daftar Tamu">
         <form
@@ -174,17 +154,17 @@
           <span class="pointer-events-none absolute -bottom-3.5 -right-3.5 w-7 h-7 rounded-full bg-burgundy" aria-hidden="true"></span>
 
           <!-- Ticket Top Heading -->
-          <div class="text-center space-y-1.5">
-            <p class="text-[8.5px] uppercase tracking-[0.28em] text-burgundy-soft font-medium">
+          <div class="text-center space-y-2">
+            <p class="text-[9.5px] uppercase tracking-[0.26em] text-burgundy-soft font-medium">
               The Wedding of
             </p>
-            <h2 class="font-display-medium text-[26px] leading-[1.15] uppercase tracking-[0.06em] text-burgundy">
+            <h1 class="font-display-medium text-[28px] sm:text-[30px] leading-[1.15] uppercase tracking-[0.08em] text-burgundy">
               KIRIM UNDANGAN
-            </h2>
+            </h1>
             <p class="font-script text-[28px] leading-snug text-burgundy-soft">
               Komalasari &amp; Najmudin
             </p>
-            <p class="pt-1 text-xs text-burgundy-soft leading-relaxed">
+            <p class="pt-1 text-xs text-burgundy-soft leading-[1.65] max-w-[310px] mx-auto">
               Ketik atau tempel daftar nama tamu (1 nama per baris), lalu ketuk <strong>Buat Daftar Link</strong>.
             </p>
           </div>
@@ -196,43 +176,15 @@
             <span class="absolute -right-8 w-6 h-6 rounded-full bg-burgundy"></span>
           </div>
 
-          <!-- Public Base URL Input Area -->
-          <div class="space-y-2 mb-5 pb-5 border-b border-dashed border-burgundy/25">
-            <div class="flex items-center justify-between gap-2">
-              <label for="public-base-url-input" class="block text-xs font-semibold uppercase tracking-[0.12em] text-burgundy">
-                Link Halaman Utama Undangan (GitHub / Domain Publik)
-              </label>
-              <span
-                id="base-url-status-badge"
-                class="px-2.5 py-0.5 rounded-full bg-[#F1F6F1] border border-[#1E5631]/35 text-[#1E5631] text-[10.5px] font-semibold shrink-0"
-              >
-                Link Publik Aktif
-              </span>
-            </div>
-
-            <input
-              id="public-base-url-input"
-              type="url"
-              inputmode="url"
-              value="https://munimabdul605-eng.github.io/undangan-komalasari-najmudin./"
-              placeholder="https://munimabdul605-eng.github.io/undangan-komalasari-najmudin./"
-              class="w-full min-h-[46px] px-3.5 py-2.5 rounded-xl bg-white border border-burgundy/30 text-sm text-burgundy placeholder:text-[#68504A]"
-            />
-
-            <p id="base-url-helper-text" class="text-[11px] text-burgundy-soft leading-relaxed">
-              Semua link tamu otomatis memakai alamat publik: https://munimabdul605-eng.github.io/undangan-komalasari-najmudin./
-            </p>
-          </div>
-
           <!-- Guest Names Input Area -->
-          <div class="space-y-3">
+          <div class="space-y-3.5">
             <div class="flex items-center justify-between gap-2">
               <label for="guest-list-input" class="block text-xs font-semibold uppercase tracking-[0.12em] text-burgundy">
                 Daftar Nama Tamu
               </label>
               <span
                 id="guest-line-count"
-                class="px-2.5 py-0.5 rounded-full bg-burgundy text-cream text-[11px] font-medium shrink-0"
+                class="px-3 py-0.5 rounded-full bg-burgundy text-cream text-[11px] font-medium shrink-0"
               >
                 0 Nama
               </span>
@@ -242,14 +194,14 @@
               id="guest-list-input"
               rows="6"
               placeholder="Pak Afar&#10;19. Reza&#10;Bpk. Hendra &amp; Keluarga"
-              class="w-full px-3.5 py-3 rounded-xl bg-white border border-burgundy/30 text-sm text-burgundy placeholder:text-[#68504A] leading-relaxed resize-y"
+              class="w-full px-3.5 py-3 rounded-xl bg-white border border-burgundy/30 text-sm text-burgundy placeholder:text-[#68504A] leading-[1.65] resize-y"
             ></textarea>
 
-            <div class="flex flex-wrap items-center justify-between gap-2">
+            <div class="flex flex-wrap items-center justify-between gap-2.5">
               <button
                 id="btn-fill-sample"
                 type="button"
-                class="min-h-[44px] px-3.5 py-2 rounded-full bg-white hover:bg-cream-warm border border-burgundy/30 text-xs font-medium text-burgundy inline-flex items-center gap-1.5 transition-colors"
+                class="min-h-[44px] px-4 py-2 rounded-full bg-white hover:bg-cream-warm border border-burgundy/30 text-xs font-medium text-burgundy inline-flex items-center gap-1.5 transition-colors"
               >
                 <span>Isi Contoh Nama</span>
               </button>
@@ -257,13 +209,13 @@
               <button
                 id="btn-clear-guests"
                 type="button"
-                class="min-h-[44px] px-3.5 py-2 rounded-full bg-white hover:bg-[#FDF2F2] border border-[#991B1B]/35 text-xs font-medium text-[#991B1B] inline-flex items-center gap-1.5 transition-colors"
+                class="min-h-[44px] px-4 py-2 rounded-full bg-white hover:bg-[#FDF2F2] border border-[#991B1B]/35 text-xs font-medium text-[#991B1B] inline-flex items-center gap-1.5 transition-colors"
               >
                 <span>Kosongkan Daftar</span>
               </button>
             </div>
 
-            <p id="autosave-indicator" class="text-[11px] font-medium text-burgundy-soft flex items-center gap-1.5 pt-1">
+            <p id="autosave-indicator" class="text-[11px] font-medium text-burgundy-soft flex items-center gap-1.5 pt-0.5">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" />
                 <path d="M8.5 12.2L10.8 14.5L15.8 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
@@ -277,11 +229,11 @@
             id="generator-status"
             role="status"
             aria-live="polite"
-            class="hidden mt-4 rounded-xl px-4 py-3 text-xs font-medium"
+            class="hidden mt-4 rounded-xl px-4 py-3 text-xs font-medium leading-relaxed"
           ></div>
 
           <!-- Submit Button -->
-          <div class="mt-5">
+          <div class="mt-6">
             <button
               id="btn-generate-links"
               type="submit"
@@ -298,34 +250,34 @@
       </section>
 
       <!-- ==================== DAFTAR KARTU HASIL PER TAMU ==================== -->
-      <section id="results-section" aria-label="Daftar Link Undangan Tamu" class="space-y-4">
-        <div class="flex items-end justify-between gap-2">
-          <div>
+      <section id="results-section" aria-label="Daftar Kartu Undangan Tamu" class="space-y-5">
+        <div class="flex items-end justify-between gap-3">
+          <div class="space-y-1">
             <p class="font-script text-[30px] leading-none text-champagne">
               Daftar Tamu
             </p>
-            <h2 class="font-headline text-2xl text-cream mt-0.5">
-              Kartu Link Undangan
+            <h2 class="font-display-medium text-2xl leading-tight text-cream">
+              Kartu Pesan Undangan
             </h2>
           </div>
           <span
             id="total-cards-badge"
-            class="px-3 py-1 rounded-full bg-cream text-burgundy text-xs font-semibold shrink-0"
+            class="px-3.5 py-1 rounded-full bg-cream text-burgundy text-xs font-semibold shrink-0"
           >
             0 Tamu
           </span>
         </div>
 
         <!-- Search Filter -->
-        <div>
-          <label for="search-guest-input" class="block text-xs font-medium text-cream-warm mb-1.5">
+        <div class="space-y-1.5">
+          <label for="search-guest-input" class="block text-xs font-medium text-cream-warm">
             Cari Nama Tamu di Daftar
           </label>
           <input
             id="search-guest-input"
             type="search"
             placeholder="Ketik nama tamu untuk menyaring..."
-            class="w-full min-h-[46px] px-3.5 py-2.5 rounded-xl bg-burgundy-deep/75 border border-cream/25 text-xs text-cream placeholder:text-cream-warm"
+            class="w-full min-h-[46px] px-3.5 py-2.5 rounded-xl bg-burgundy-deep/75 border border-cream/25 text-xs text-cream placeholder:text-cream-warm/80"
           />
         </div>
 
@@ -334,16 +286,16 @@
           id="cards-empty-state"
           class="hidden rounded-2xl bg-burgundy-deep/65 border border-cream/25 p-6 text-center space-y-2"
         >
-          <p id="cards-empty-title" class="font-headline text-xl text-cream">
+          <p id="cards-empty-title" class="font-display-medium text-xl text-cream">
             Belum Ada Daftar Tamu
           </p>
-          <p id="cards-empty-desc" class="text-xs text-cream-warm leading-relaxed max-w-xs mx-auto">
+          <p id="cards-empty-desc" class="text-xs text-cream-warm leading-[1.65] max-w-xs mx-auto">
             Ketik atau tempel nama tamu pada kotak di atas (1 nama per baris), lalu ketuk tombol Buat Daftar Link.
           </p>
         </div>
 
         <!-- Cards Container -->
-        <div id="generated-cards-list" class="space-y-4"></div>
+        <div id="generated-cards-list" class="space-y-5"></div>
       </section>
     </main>
 
@@ -380,9 +332,9 @@
       const DEFAULT_PUBLIC_BASE_URL = "https://munimabdul605-eng.github.io/undangan-komalasari-najmudin./";
 
       const STORAGE_KEYS = {
-        BASE_URL: "undangan_kn_kirim_baseurl_v1",
         GUESTS: "undangan_kn_kirim_guests_v1",
         SENT_MAP: "undangan_kn_kirim_sent_v1",
+        CUSTOM_MESSAGES: "undangan_kn_kirim_custom_msg_v1",
       };
 
       const SAMPLE_GUESTS = [
@@ -416,9 +368,6 @@
 
       // DOM Elements
       const generatorForm = document.getElementById("generator-form");
-      const publicBaseUrlInput = document.getElementById("public-base-url-input");
-      const baseUrlStatusBadge = document.getElementById("base-url-status-badge");
-      const baseUrlHelperText = document.getElementById("base-url-helper-text");
       const guestListInput = document.getElementById("guest-list-input");
       const guestLineCount = document.getElementById("guest-line-count");
       const btnFillSample = document.getElementById("btn-fill-sample");
@@ -481,48 +430,8 @@
         }
       }
 
-      function getEffectiveBaseUrl() {
-        const customUrl = publicBaseUrlInput ? normalizeBaseUrl(publicBaseUrlInput.value) : "";
-        return customUrl || detectBaseUrl();
-      }
-
-      function updateBaseUrlStatusUI() {
-        const effectiveUrl = getEffectiveBaseUrl();
-        const isLocal = isLocalAddress(effectiveUrl);
-
-        if (baseUrlStatusBadge) {
-          baseUrlStatusBadge.classList.remove(
-            "bg-[#FDF2F2]",
-            "border-[#B91C1C]/35",
-            "text-[#991B1B]",
-            "bg-[#F1F6F1]",
-            "border-[#1E5631]/35",
-            "text-[#1E5631]"
-          );
-          if (isLocal) {
-            baseUrlStatusBadge.textContent = "Masih Localhost";
-            baseUrlStatusBadge.classList.add("bg-[#FDF2F2]", "border-[#B91C1C]/35", "text-[#991B1B]");
-          } else {
-            baseUrlStatusBadge.textContent = "Link Publik Aktif";
-            baseUrlStatusBadge.classList.add("bg-[#F1F6F1]", "border-[#1E5631]/35", "text-[#1E5631]");
-          }
-        }
-
-        if (baseUrlHelperText) {
-          if (isLocal) {
-            baseUrlHelperText.textContent =
-              "Saat ini preview memakai alamat lokal (" +
-              effectiveUrl +
-              "). Tempel link GitHub Pages / domain publik Anda di atas agar semua tamu bisa membukanya.";
-          } else {
-            baseUrlHelperText.textContent =
-              "Semua link tamu otomatis memakai alamat publik: " + effectiveUrl;
-          }
-        }
-      }
-
       function buildInvitationUrl(guestName) {
-        const baseUrl = getEffectiveBaseUrl();
+        const baseUrl = detectBaseUrl();
         const separator = baseUrl.indexOf("?") !== -1 ? "&" : "?";
         return baseUrl + separator + "to=" + encodeURIComponent(guestName);
       }
@@ -569,6 +478,25 @@
         safeSetStorage(STORAGE_KEYS.SENT_MAP, JSON.stringify(map));
       }
 
+      function getCustomMessagesMap() {
+        try {
+          const raw = safeGetStorage(STORAGE_KEYS.CUSTOM_MESSAGES);
+          return raw ? JSON.parse(raw) || {} : {};
+        } catch (err) {
+          return {};
+        }
+      }
+
+      function setGuestCustomMessage(guestName, customText) {
+        const map = getCustomMessagesMap();
+        if (typeof customText === "string") {
+          map[guestName] = customText;
+        } else {
+          delete map[guestName];
+        }
+        safeSetStorage(STORAGE_KEYS.CUSTOM_MESSAGES, JSON.stringify(map));
+      }
+
       function parseGuestLines(rawText) {
         return String(rawText || "")
           .split(/\r?\n/)
@@ -586,9 +514,6 @@
       }
 
       function saveDraftToLocalStorage() {
-        if (publicBaseUrlInput) {
-          safeSetStorage(STORAGE_KEYS.BASE_URL, publicBaseUrlInput.value.trim());
-        }
         safeSetStorage(STORAGE_KEYS.GUESTS, guestListInput.value);
         updateLineCounter();
 
@@ -606,19 +531,9 @@
       }
 
       function loadDraftFromLocalStorage() {
-        const savedBaseUrl = safeGetStorage(STORAGE_KEYS.BASE_URL);
-        const normalizedSavedUrl = savedBaseUrl ? normalizeBaseUrl(savedBaseUrl) : "";
-        if (publicBaseUrlInput) {
-          if (normalizedSavedUrl && !isLocalAddress(normalizedSavedUrl)) {
-            publicBaseUrlInput.value = savedBaseUrl;
-          } else {
-            publicBaseUrlInput.value = DEFAULT_PUBLIC_BASE_URL;
-          }
-        }
         const savedGuests = safeGetStorage(STORAGE_KEYS.GUESTS);
         guestListInput.value = savedGuests !== null ? savedGuests : SAMPLE_GUESTS;
         updateLineCounter();
-        updateBaseUrlStatusUI();
       }
 
       // ==================== 3. TOAST & STATUS HELPERS ====================
@@ -684,6 +599,7 @@
         const allGuests = parseGuestLines(guestListInput.value);
         const filterQuery = (searchGuestInput.value || "").trim().toLowerCase();
         const sentMap = getSentStatusMap();
+        const customMessagesMap = getCustomMessagesMap();
 
         totalCardsBadge.textContent = allGuests.length + " Tamu";
         generatedCardsList.innerHTML = "";
@@ -712,12 +628,15 @@
 
         filteredGuests.forEach(function (guestName, idx) {
           const inviteUrl = buildInvitationUrl(guestName);
-          const fullWaMessage = buildPersonalizedMessage(guestName, inviteUrl);
-          const waSendUrl = "https://api.whatsapp.com/send?text=" + encodeURIComponent(fullWaMessage);
+          const defaultFullMessage = buildPersonalizedMessage(guestName, inviteUrl);
+          const currentMessage =
+            typeof customMessagesMap[guestName] === "string"
+              ? customMessagesMap[guestName]
+              : defaultFullMessage;
           const isSent = Boolean(sentMap[guestName]);
 
           const card = document.createElement("article");
-          card.className = "relative cream-canvas text-burgundy cream-surface px-5 py-5 shadow-xl overflow-hidden";
+          card.className = "relative cream-canvas text-burgundy cream-surface px-5 py-6 shadow-xl overflow-hidden";
 
           // Vintage ticket corner cutouts
           ["-top-2.5 -left-2.5", "-top-2.5 -right-2.5", "-bottom-2.5 -left-2.5", "-bottom-2.5 -right-2.5"].forEach(function (pos) {
@@ -735,11 +654,11 @@
           titleWrap.className = "flex items-baseline gap-2 min-w-0";
 
           const numBadge = document.createElement("span");
-          numBadge.className = "font-headline italic text-base font-semibold text-burgundy-soft shrink-0";
+          numBadge.className = "font-display-medium italic text-base text-burgundy-soft shrink-0";
           numBadge.textContent = String(idx + 1).padStart(2, "0") + ".";
 
           const nameHeading = document.createElement("h3");
-          nameHeading.className = "font-headline text-2xl font-medium text-burgundy break-words leading-snug";
+          nameHeading.className = "font-display-medium text-xl sm:text-2xl text-burgundy break-words leading-snug";
           nameHeading.textContent = guestName;
 
           titleWrap.appendChild(numBadge);
@@ -748,8 +667,8 @@
           const sentBtn = document.createElement("button");
           sentBtn.type = "button";
           sentBtn.className = isSent
-            ? "min-h-[44px] px-3 py-1.5 rounded-full bg-[#F1F6F1] border border-[#1E5631]/40 text-[11px] font-semibold text-[#1E5631] shrink-0"
-            : "min-h-[44px] px-3 py-1.5 rounded-full bg-white border border-burgundy/30 text-[11px] font-medium text-burgundy-soft shrink-0";
+            ? "min-h-[44px] px-3.5 py-1.5 rounded-full bg-[#F1F6F1] border border-[#1E5631]/40 text-[11px] font-semibold text-[#1E5631] shrink-0"
+            : "min-h-[44px] px-3.5 py-1.5 rounded-full bg-white border border-burgundy/30 text-[11px] font-medium text-burgundy-soft shrink-0";
           sentBtn.textContent = isSent ? "Sudah Dikirim" : "Belum Dikirim";
           sentBtn.addEventListener("click", function () {
             const nextState = !Boolean(getSentStatusMap()[guestName]);
@@ -760,67 +679,82 @@
           headerRow.appendChild(titleWrap);
           headerRow.appendChild(sentBtn);
 
-          // Automatic URL Preview Box
-          const urlBox = document.createElement("div");
-          urlBox.className = "mt-3 rounded-xl bg-white border border-burgundy/25 px-3.5 py-2.5";
+          // Editable Message Preview Container
+          const messageBox = document.createElement("div");
+          messageBox.className = "mt-4 space-y-2";
 
-          const urlLabel = document.createElement("p");
-          urlLabel.className = "text-[9.5px] font-semibold uppercase tracking-[0.16em] text-burgundy-soft mb-0.5";
-          urlLabel.textContent = "Preview Link Undangan:";
+          const msgHeaderRow = document.createElement("div");
+          msgHeaderRow.className = "flex items-center justify-between gap-2";
 
-          const urlLink = document.createElement("a");
-          urlLink.href = inviteUrl;
-          urlLink.target = "_blank";
-          urlLink.rel = "noopener noreferrer";
-          urlLink.className = "block text-xs text-burgundy hover:underline break-all";
-          urlLink.textContent = inviteUrl;
+          const textareaId = "guest-msg-" + idx;
+          const msgLabel = document.createElement("label");
+          msgLabel.setAttribute("for", textareaId);
+          msgLabel.className = "text-[11px] font-semibold uppercase tracking-[0.12em] text-burgundy-soft";
+          msgLabel.textContent = "Preview Pesan Pengantar (Dapat Diedit)";
 
-          urlBox.appendChild(urlLabel);
-          urlBox.appendChild(urlLink);
+          const resetBtn = document.createElement("button");
+          resetBtn.type = "button";
+          resetBtn.className =
+            "btn-reset-msg min-h-[44px] px-3.5 py-1.5 rounded-full bg-white hover:bg-cream-warm border border-burgundy/30 text-[11px] font-medium text-burgundy shrink-0 transition-colors";
+          resetBtn.textContent = "Reset";
 
-          // Collapsible Message Preview
-          const detailsEl = document.createElement("details");
-          detailsEl.className = "mt-2.5 rounded-xl bg-white/75 border border-burgundy/20 px-3.5 py-2 text-xs text-burgundy-soft";
+          msgHeaderRow.appendChild(msgLabel);
+          msgHeaderRow.appendChild(resetBtn);
 
-          const summaryEl = document.createElement("summary");
-          summaryEl.className = "font-medium text-burgundy select-none py-1";
-          summaryEl.textContent = "Lihat Preview Pesan Pengantar";
+          const messageTextarea = document.createElement("textarea");
+          messageTextarea.id = textareaId;
+          messageTextarea.rows = 7;
+          messageTextarea.className =
+            "guest-message-textarea w-full px-3.5 py-3 rounded-xl bg-white border border-burgundy/30 text-xs text-burgundy leading-[1.65] resize-y";
+          messageTextarea.value = currentMessage;
 
-          const previewPre = document.createElement("pre");
-          previewPre.className = "mt-2 pt-2 border-t border-burgundy/15 whitespace-pre-wrap font-sans text-xs text-burgundy-soft leading-relaxed";
-          previewPre.textContent = fullWaMessage;
-
-          detailsEl.appendChild(summaryEl);
-          detailsEl.appendChild(previewPre);
+          messageBox.appendChild(msgHeaderRow);
+          messageBox.appendChild(messageTextarea);
 
           // Perforated Tear-Off Divider
           const divider = document.createElement("div");
-          divider.className = "relative my-4 flex items-center";
+          divider.className = "relative my-5 flex items-center";
           divider.setAttribute("aria-hidden", "true");
           divider.innerHTML =
             '<span class="absolute -left-7 w-5 h-5 rounded-full bg-burgundy"></span>' +
             '<div class="w-full border-t border-dashed border-burgundy/35"></div>' +
             '<span class="absolute -right-7 w-5 h-5 rounded-full bg-burgundy"></span>';
 
-          // 3 Mandatory Action Buttons: Kirim WA, Salin Teks, Salin Link
+          // 3 Action Buttons: Kirim WA, Salin Teks, Salin Link
           const actionsGrid = document.createElement("div");
           actionsGrid.className = "grid grid-cols-1 sm:grid-cols-3 gap-2.5";
 
           // 1. Tombol Kirim WA (WhatsApp Green)
           const btnWa = document.createElement("a");
-          btnWa.href = waSendUrl;
+          btnWa.href = "https://api.whatsapp.com/send?text=" + encodeURIComponent(currentMessage);
           btnWa.target = "_blank";
           btnWa.rel = "noopener noreferrer";
           btnWa.className =
             "btn-kirim-wa min-h-[44px] px-4 py-2.5 rounded-full bg-wa hover:bg-wa-hover text-white text-xs font-medium inline-flex items-center justify-center gap-2 shadow-sm transition-colors";
           btnWa.innerHTML =
             '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12.06 21.8c-1.8 0-3.56-.48-5.1-1.4l-.37-.21-3.75.98 1-3.66-.24-.38a9.86 9.86 0 0 1-1.51-5.23c0-5.45 4.44-9.89 9.9-9.89 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.9 6.99c0 5.46-4.44 9.9-9.82 9.9Zm5.43-7.41c-.3-.15-1.76-.87-2.03-.97-.28-.1-.48-.15-.68.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.48-1.77-1.66-2.07-.17-.3-.02-.46.13-.6.14-.14.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.68-1.63-.93-2.23-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z" fill="currentColor"/></svg><span>Kirim WA</span>';
+
+          messageTextarea.addEventListener("input", function () {
+            const editedText = messageTextarea.value;
+            btnWa.href = "https://api.whatsapp.com/send?text=" + encodeURIComponent(editedText);
+            setGuestCustomMessage(guestName, editedText === defaultFullMessage ? null : editedText);
+          });
+
+          resetBtn.addEventListener("click", function () {
+            messageTextarea.value = defaultFullMessage;
+            btnWa.href = "https://api.whatsapp.com/send?text=" + encodeURIComponent(defaultFullMessage);
+            setGuestCustomMessage(guestName, null);
+            showToast("Pesan pengantar dikembalikan ke teks awal");
+          });
+
           btnWa.addEventListener("click", function () {
+            const latestText = messageTextarea.value;
+            setGuestCustomMessage(guestName, latestText === defaultFullMessage ? null : latestText);
             setGuestSentStatus(guestName, true);
             renderGuestCards();
           });
 
-          // 2. Tombol Salin Teks (Full Message + Link)
+          // 2. Tombol Salin Teks (Current Edited Message + Link)
           const btnCopyText = document.createElement("button");
           btnCopyText.type = "button";
           btnCopyText.className =
@@ -829,7 +763,7 @@
             '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M5 15H4C2.895 15 2 14.105 2 13V4C2 2.895 2.895 2 4 2H13C14.105 2 15 2.895 15 4V5" stroke="currentColor" stroke-width="1.7"/></svg><span>Salin Teks</span>';
           btnCopyText.addEventListener("click", async function () {
             try {
-              await copyTextToClipboard(fullWaMessage);
+              await copyTextToClipboard(messageTextarea.value);
               showToast("Berhasil disalin (Teks pengantar untuk " + guestName + ")");
             } catch (err) {
               showToast("Gagal menyalin teks secara otomatis.");
@@ -857,8 +791,7 @@
           actionsGrid.appendChild(btnCopyLink);
 
           card.appendChild(headerRow);
-          card.appendChild(urlBox);
-          card.appendChild(detailsEl);
+          card.appendChild(messageBox);
           card.appendChild(divider);
           card.appendChild(actionsGrid);
 
@@ -867,14 +800,6 @@
       }
 
       // ==================== 5. EVENT LISTENERS ====================
-      if (publicBaseUrlInput) {
-        publicBaseUrlInput.addEventListener("input", function () {
-          saveDraftToLocalStorage();
-          updateBaseUrlStatusUI();
-          renderGuestCards();
-        });
-      }
-
       guestListInput.addEventListener("input", function () {
         saveDraftToLocalStorage();
       });
@@ -900,7 +825,6 @@
       generatorForm.addEventListener("submit", function (event) {
         event.preventDefault();
         saveDraftToLocalStorage();
-        updateBaseUrlStatusUI();
         const guests = parseGuestLines(guestListInput.value);
 
         if (guests.length === 0) {
@@ -911,8 +835,8 @@
         }
 
         renderGuestCards();
-        showStatusBanner("success", "Berhasil membuat " + guests.length + " kartu link undangan tamu.");
-        showToast("Berhasil membuat " + guests.length + " link tamu");
+        showStatusBanner("success", "Berhasil membuat " + guests.length + " kartu undangan tamu.");
+        showToast("Berhasil membuat " + guests.length + " kartu tamu");
       });
 
       // ==================== INITIALIZATION ====================

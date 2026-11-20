@@ -9,11 +9,11 @@
     content="Undangan pernikahan digital Komalasari &amp; Najmudin. Akad Nikah 02 Desember 2026 &amp; Resepsi 06 Desember 2026 di Kp. Cirungki, Desa Hegarmanah, Kec. Cikancung, Kab. Bandung."
   />
 
-  <!-- Google Fonts: BeautiqueDisplay-Medium fallback (Playfair Display & Cormorant Garamond), Great Vibes & Montserrat -->
+  <!-- Google Fonts: BeautiqueDisplay-Medium fallback, Great Vibes, Montserrat & Noto Nastaliq Urdu fallback -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;500&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap"
     rel="stylesheet"
   />
 
@@ -49,6 +49,33 @@
   </script>
 
   <style>
+    @font-face {
+      font-family: "IranNastaliq";
+      src:
+        local("IranNastaliq"),
+        local("IranNastaliq-Regular"),
+        local("IranNastaliqRegular"),
+        url("assets/fonts/IranNastaliq.woff2") format("woff2"),
+        url("assets/fonts/IranNastaliq.ttf") format("truetype"),
+        url("https://raw.githubusercontent.com/font-store/font-IranNastaliq/master/WebFonts/IranNastaliq-Web.woff2") format("woff2"),
+        url("https://raw.githubusercontent.com/font-store/font-IranNastaliq/master/old/IranNastaliq.ttf") format("truetype");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "LPMQ IsepMisbah";
+      src:
+        local("LPMQ IsepMisbah"),
+        local("LPMQ Isep Misbah"),
+        url("assets/fonts/LPMQ-IsepMisbah.ttf") format("truetype"),
+        url("https://raw.githubusercontent.com/utrodus/flutter-ayatnesia-quran-search/main/assets/fonts/LPMQ-IsepMisbah.ttf") format("truetype");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
     :root {
       --bg-burgundy: #3b0a10;
       --bg-cream: #f4ede2;
@@ -69,6 +96,21 @@
     .font-display-medium {
       font-family: "BeautiqueDisplay-Medium", "Beautique Display", "Playfair Display", "Cormorant Garamond", Georgia, serif;
       font-weight: 500;
+    }
+
+    .font-arabic-nastaliq {
+      font-family: "IranNastaliq", "Noto Nastaliq Urdu", "LPMQ IsepMisbah", serif;
+      line-height: 2.65;
+      direction: rtl;
+      unicode-bidi: isolate;
+      font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    }
+
+    .font-arabic-lpmq {
+      font-family: "LPMQ IsepMisbah", "Amiri Quran", "Amiri", "Traditional Arabic", serif;
+      line-height: 2.25;
+      direction: rtl;
+      unicode-bidi: isolate;
     }
 
     body.cover-locked {
@@ -409,34 +451,56 @@
         </div>
 
         <!-- Greeting & Ayat Section (Foto 2: Textured Wax-Sealed Parchment Background) -->
-        <div data-aos="fade-up" class="relative mt-6 w-full max-w-[420px] aspect-[375/666] mx-auto">
-          <img
-            src="assets/images/quran-paper.png"
-            alt="Kertas berstempel lilin burgundy untuk sambutan dan ayat suci Al-Qur'an"
-            width="375"
-            height="666"
-            loading="lazy"
-            class="absolute inset-0 w-full h-full object-contain pointer-events-none select-none"
-          />
+        <div data-aos="fade-up" class="w-full max-w-[420px] mx-auto -mt-6">
+          <!-- Top Wax Seal Cap matching natural PNG width/aspect so seal never distorts -->
+          <div class="w-full aspect-[375/185] overflow-hidden pointer-events-none select-none" aria-hidden="true">
+            <img
+              src="assets/images/quran-paper.png"
+              alt=""
+              width="375"
+              height="666"
+              loading="lazy"
+              class="w-full h-auto block"
+            />
+          </div>
 
-          <div class="relative z-10 h-full pt-[27%] pb-10 px-[12%] flex flex-col justify-center text-center cream-surface space-y-4">
-            <div class="space-y-2">
+          <!-- Expandable Textured Cream Parchment Body -->
+          <div
+            class="-mt-[1px] w-full pt-5 pb-11 px-[14%] text-center cream-surface"
+            style="background-image: url('assets/images/quran-paper.png'); background-size: 100% 150%; background-position: center bottom; background-repeat: no-repeat;"
+          >
+            <!-- Sambutan -->
+            <div class="space-y-2.5">
               <p class="font-script text-[30px] sm:text-[34px] leading-tight text-burgundy">
                 Keluarga &amp; Sahabat Tercinta
               </p>
-              <p class="text-[11.5px] sm:text-xs leading-relaxed text-burgundy-soft max-w-xs mx-auto">
+              <p class="text-xs leading-[1.75] text-burgundy-soft max-w-[285px] mx-auto">
                 Assalamu&rsquo;alaikum Warahmatullahi Wabarakatuh. Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk berbagi kebahagiaan di hari pernikahan kami.
               </p>
             </div>
 
-            <div class="w-12 h-[1px] bg-burgundy/25 mx-auto" aria-hidden="true"></div>
+            <!-- Generous Ornamental Divider between Sambutan and Ayat -->
+            <div class="my-7 flex items-center justify-center gap-3" aria-hidden="true">
+              <span class="w-10 h-[1px] bg-burgundy/25"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-burgundy/40"></span>
+              <span class="w-10 h-[1px] bg-burgundy/25"></span>
+            </div>
 
-            <!-- QS. Ar-Rum: 21 -->
-            <div class="space-y-2">
-              <p class="font-script text-[26px] sm:text-[30px] leading-none text-burgundy">
+            <!-- QS. Ar-Rum: 21 (Arabic with IranNastaliq Regular + Indonesian Translation) -->
+            <div>
+              <p class="font-script text-[28px] sm:text-[31px] leading-tight text-burgundy">
                 QS. Ar-Rum: 21
               </p>
-              <blockquote class="text-[11.5px] sm:text-xs leading-relaxed text-burgundy-soft max-w-xs mx-auto">
+
+              <p
+                lang="ar"
+                dir="rtl"
+                class="font-arabic-nastaliq mt-4 mb-4 text-[18px] sm:text-[20px] text-burgundy text-center px-1"
+              >
+                وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً وَّرَحْمَةً ۗاِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ يَّتَفَكَّرُوْنَ
+              </p>
+
+              <blockquote class="text-[11.5px] sm:text-xs leading-[1.75] text-burgundy-soft max-w-[290px] mx-auto">
                 &ldquo;Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.&rdquo;
               </blockquote>
             </div>
@@ -829,28 +893,29 @@
           </div>
         </div>
 
-        <!-- Minimalist DANA Cards -->
+        <!-- Minimalist Dana Cards -->
         <div class="mt-6 space-y-4">
           <div
             data-aos="fade-up"
             class="rounded-xl bg-cream text-burgundy cream-surface p-5 shadow-lg"
           >
             <div class="flex items-center justify-between">
-              <span class="text-xs font-semibold uppercase tracking-[0.18em] text-burgundy">DANA 1</span>
+              <span class="text-xs font-semibold tracking-[0.14em] text-burgundy">Dana</span>
               <svg width="32" height="22" viewBox="0 0 34 24" fill="none" class="text-burgundy-soft" aria-hidden="true">
                 <rect x="1" y="1" width="32" height="22" rx="4" stroke="currentColor" stroke-width="1.1" />
                 <path d="M1 9H11M23 9H33M1 15H11M23 15H33M11 1V23M23 1V23" stroke="currentColor" stroke-width="0.9" />
               </svg>
             </div>
-            <p class="mt-4 text-[10px] uppercase tracking-widest text-burgundy-soft">Nomor DANA</p>
+            <p class="mt-4 text-[11px] tracking-wide text-burgundy-soft">Nomor Dana</p>
             <p class="font-display-medium text-[28px] tracking-wider text-burgundy tabular-nums">
               083196761172
             </p>
+            <p class="text-xs font-medium text-burgundy mt-1">a.n. Malla</p>
             <div class="mt-4 pt-3 border-t border-burgundy/20 flex justify-end">
               <button
                 type="button"
                 data-copy="083196761172"
-                data-label="Nomor DANA 1 (083196761172)"
+                data-label="Nomor Dana a.n. Malla (083196761172)"
                 class="copy-account-btn min-h-[44px] px-5 py-2 rounded-full bg-burgundy hover:bg-burgundy-deep text-cream text-[10px] font-medium uppercase tracking-[0.16em] inline-flex items-center gap-2 transition-colors"
               >
                 <span>Salin Nomor</span>
@@ -864,21 +929,22 @@
             class="rounded-xl bg-cream text-burgundy cream-surface p-5 shadow-lg"
           >
             <div class="flex items-center justify-between">
-              <span class="text-xs font-semibold uppercase tracking-[0.18em] text-burgundy">DANA 2</span>
+              <span class="text-xs font-semibold tracking-[0.14em] text-burgundy">Dana</span>
               <svg width="32" height="22" viewBox="0 0 34 24" fill="none" class="text-burgundy-soft" aria-hidden="true">
                 <rect x="1" y="1" width="32" height="22" rx="4" stroke="currentColor" stroke-width="1.1" />
                 <path d="M1 9H11M23 9H33M1 15H11M23 15H33M11 1V23M23 1V23" stroke="currentColor" stroke-width="0.9" />
               </svg>
             </div>
-            <p class="mt-4 text-[10px] uppercase tracking-widest text-burgundy-soft">Nomor DANA</p>
+            <p class="mt-4 text-[11px] tracking-wide text-burgundy-soft">Nomor Dana</p>
             <p class="font-display-medium text-[28px] tracking-wider text-burgundy tabular-nums">
               081319734486
             </p>
+            <p class="text-xs font-medium text-burgundy mt-1">a.n. Najmuddin</p>
             <div class="mt-4 pt-3 border-t border-burgundy/20 flex justify-end">
               <button
                 type="button"
                 data-copy="081319734486"
-                data-label="Nomor DANA 2 (081319734486)"
+                data-label="Nomor Dana a.n. Najmuddin (081319734486)"
                 class="copy-account-btn min-h-[44px] px-5 py-2 rounded-full bg-burgundy hover:bg-burgundy-deep text-cream text-[10px] font-medium uppercase tracking-[0.16em] inline-flex items-center gap-2 transition-colors"
               >
                 <span>Salin Nomor</span>
