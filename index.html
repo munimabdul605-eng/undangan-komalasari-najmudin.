@@ -9,11 +9,11 @@
     content="Undangan pernikahan digital Komalasari &amp; Najmudin. Akad Nikah 02 Desember 2026 &amp; Resepsi 06 Desember 2026 di Kp. Cirungki, Desa Hegarmanah, Kec. Cikancung, Kab. Bandung."
   />
 
-  <!-- Google Fonts: Cormorant Garamond, Bodoni Moda, Great Vibes (script) & Poppins -->
+  <!-- Google Fonts: BeautiqueDisplay-Medium fallback (Playfair Display & Cormorant Garamond), Great Vibes & Montserrat -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap"
     rel="stylesheet"
   />
 
@@ -37,10 +37,11 @@
             "gold-dark": "#8D6835",
           },
           fontFamily: {
-            headline: ['"Bodoni Moda"', '"Cormorant Garamond"', "Georgia", "serif"],
+            display: ['"BeautiqueDisplay-Medium"', '"Beautique Display"', '"Playfair Display"', '"Cormorant Garamond"', "Georgia", "serif"],
+            headline: ['"BeautiqueDisplay-Medium"', '"Beautique Display"', '"Playfair Display"', '"Cormorant Garamond"', "Georgia", "serif"],
             serif: ['"Cormorant Garamond"', "Georgia", "serif"],
             script: ['"Great Vibes"', "cursive"],
-            sans: ['"Poppins"', "system-ui", "-apple-system", "sans-serif"],
+            sans: ['"Montserrat"', "system-ui", "-apple-system", "sans-serif"],
           },
         },
       },
@@ -60,9 +61,14 @@
     body {
       background-color: #240609;
       color: var(--text-cream);
-      font-family: "Poppins", system-ui, -apple-system, sans-serif;
+      font-family: "Montserrat", system-ui, -apple-system, sans-serif;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+    }
+
+    .font-display-medium {
+      font-family: "BeautiqueDisplay-Medium", "Beautique Display", "Playfair Display", "Cormorant Garamond", Georgia, serif;
+      font-weight: 500;
     }
 
     body.cover-locked {
@@ -201,181 +207,55 @@
     Browser Anda tidak mendukung pemutar audio HTML5.
   </audio>
 
-  <!-- ==================== 1. COVER OVERLAY (VINTAGE PERFORATED TICKET) ==================== -->
+  <!-- ==================== 1. COVER OVERLAY (FOTO 1: BURGUNDY ENVELOPE & WAX SEAL) ==================== -->
   <section
     id="cover-overlay"
-    aria-label="Sampul Undangan Tiket Pernikahan"
-    class="fixed inset-y-0 left-1/2 -translate-x-1/2 z-50 w-full max-w-[480px] h-[100dvh] burgundy-canvas flex flex-col justify-between px-5 py-6 shadow-2xl overflow-y-auto overflow-x-hidden border-x border-cream/10"
+    aria-label="Sampul Undangan Pernikahan"
+    class="fixed inset-y-0 left-1/2 -translate-x-1/2 z-50 w-full max-w-[480px] h-[100dvh] burgundy-canvas flex flex-col justify-between items-center px-4 py-4 shadow-2xl overflow-y-auto overflow-x-hidden border-x border-cream/10"
   >
-    <div class="my-auto w-full">
-      <!-- Vintage Notched Cinema Ticket Card -->
-      <div class="relative w-full bg-cream text-burgundy cream-surface px-5 pt-7 pb-6 shadow-[0_20px_50px_rgba(0,0,0,0.45)] overflow-hidden">
-        <!-- 4 Concave Scooped Ticket Corners -->
-        <span class="pointer-events-none absolute -top-3.5 -left-3.5 w-7 h-7 rounded-full bg-burgundy" aria-hidden="true"></span>
-        <span class="pointer-events-none absolute -top-3.5 -right-3.5 w-7 h-7 rounded-full bg-burgundy" aria-hidden="true"></span>
-        <span class="pointer-events-none absolute -bottom-3.5 -left-3.5 w-7 h-7 rounded-full bg-burgundy" aria-hidden="true"></span>
-        <span class="pointer-events-none absolute -bottom-3.5 -right-3.5 w-7 h-7 rounded-full bg-burgundy" aria-hidden="true"></span>
+    <div class="my-auto w-full flex flex-col items-center">
+      <!-- Centered Envelope Composition Container matching Foto 1 aspect (375x666) -->
+      <div class="relative w-full max-w-[375px] aspect-[375/666] mx-auto">
+        <img
+          src="assets/images/cover-envelope.png"
+          alt="Amplop undangan burgundy berstempel bunga dan kertas undangan"
+          width="375"
+          height="666"
+          class="absolute inset-0 w-full h-full object-contain pointer-events-none select-none"
+        />
 
-        <!-- Upper Ticket Section -->
-        <div class="text-center">
-          <p class="text-[9px] uppercase tracking-[0.28em] text-burgundy-soft font-medium">
-            The Wedding of
-          </p>
-          <h1 class="font-headline text-[30px] sm:text-[34px] leading-none uppercase tracking-[0.06em] text-burgundy mt-1">
-            UNDANGAN
-          </h1>
-          <p class="font-script text-[30px] leading-none text-burgundy-soft -mt-1">
-            Walimatul &lsquo;Ursy
-          </p>
-          <p class="mt-2.5 text-[8.5px] uppercase tracking-[0.24em] text-burgundy-soft font-medium">
-            Akad &amp; Resepsi Pernikahan
-          </p>
-        </div>
-
-        <!-- Two-Column Date & Couple Table -->
-        <div class="mt-3 border-y border-burgundy/35 grid grid-cols-[1.1fr_0.9fr] items-stretch">
-          <div class="py-2.5 pr-3 border-r border-burgundy/35 flex flex-col justify-center">
-            <p class="font-headline text-[16px] sm:text-[18px] leading-[1.15] uppercase tracking-wide text-burgundy font-medium">
+        <!-- Balanced Invitation Text inside Upper Cream Paper Region (16.5%..62% height) -->
+        <div class="cream-surface absolute top-[16.5%] bottom-[38%] left-[15%] right-[15%] flex flex-col items-center justify-center gap-2.5 sm:gap-3.5 text-center px-2 py-2">
+          <div class="space-y-1">
+            <p class="text-[9.5px] sm:text-[10px] uppercase tracking-[0.2em] text-burgundy-soft font-medium">
+              The Wedding of
+            </p>
+            <h1 class="font-display-medium text-[21px] sm:text-[24px] leading-snug tracking-[0.02em] text-burgundy">
               Komalasari &amp;<br />Najmudin
+            </h1>
+            <p class="text-[11px] font-medium text-burgundy-soft pt-0.5">
+              Minggu, 06 Desember 2026
             </p>
           </div>
-          <div class="py-2 pl-3 flex items-center justify-center gap-2">
-            <span class="font-headline text-[36px] sm:text-[40px] leading-none font-normal text-burgundy tabular-nums">06</span>
-            <div class="text-left leading-tight">
-              <span class="block text-[9px] uppercase tracking-[0.16em] font-semibold text-burgundy">Desember</span>
-              <span class="block text-[9px] uppercase tracking-[0.16em] text-burgundy-soft">2026</span>
-            </div>
+
+          <div class="w-14 h-[1px] bg-burgundy/25 mx-auto" aria-hidden="true"></div>
+
+          <div class="space-y-1">
+            <p class="text-[11px] text-burgundy-soft leading-snug">
+              Kepada Yth. Bapak/Ibu/Saudara/i
+            </p>
+            <p id="guest-name-display" class="font-display-medium text-[18px] sm:text-[20px] leading-snug text-burgundy break-words">
+              Tamu Undangan
+            </p>
           </div>
         </div>
 
-        <!-- 35mm Filmstrip (No Couple Photos: Monochrome Typography & Line Art) -->
-        <div class="mt-4 bg-[#1B1716] px-2 py-1.5 rounded-[2px]">
-          <!-- Top Film Sprockets -->
-          <div class="flex justify-between gap-1 mb-1.5 px-0.5" aria-hidden="true">
-            <span class="w-2.5 h-1.5 rounded-[1px] bg-cream"></span>
-            <span class="w-2.5 h-1.5 rounded-[1px] bg-cream"></span>
-            <span class="w-2.5 h-1.5 rounded-[1px] bg-cream"></span>
-            <span class="w-2.5 h-1.5 rounded-[1px] bg-cream"></span>
-            <span class="w-2.5 h-1.5 rounded-[1px] bg-cream"></span>
-            <span class="w-2.5 h-1.5 rounded-[1px] bg-cream"></span>
-            <span class="w-2.5 h-1.5 rounded-[1px] bg-cream"></span>
-            <span class="w-2.5 h-1.5 rounded-[1px] bg-cream"></span>
-            <span class="w-2.5 h-1.5 rounded-[1px] bg-cream"></span>
-            <span class="w-2.5 h-1.5 rounded-[1px] bg-cream"></span>
-          </div>
-
-          <div class="grid grid-cols-4 gap-1">
-            <div class="aspect-square bg-[#2D2625] border border-cream/20 flex flex-col items-center justify-center p-1 text-cream">
-              <span class="font-headline italic text-sm leading-none">K&amp;N</span>
-              <span class="text-[6.5px] uppercase tracking-widest mt-1 text-cream-warm">Cinta</span>
-            </div>
-            <div class="aspect-square bg-[#241E1E] border border-cream/20 flex items-center justify-center p-1">
-              <svg width="28" height="22" viewBox="0 0 40 28" fill="none" class="text-cream-warm" aria-hidden="true">
-                <circle cx="15" cy="14" r="8.5" stroke="currentColor" stroke-width="1.2" />
-                <circle cx="25" cy="14" r="8.5" stroke="currentColor" stroke-width="1.2" />
-              </svg>
-            </div>
-            <div class="aspect-square bg-[#2D2625] border border-cream/20 flex flex-col items-center justify-center p-1 text-cream">
-              <span class="font-headline text-xs leading-none">02.12</span>
-              <span class="text-[6.5px] uppercase tracking-widest mt-1 text-cream-warm">Akad</span>
-            </div>
-            <div class="aspect-square bg-[#241E1E] border border-cream/20 flex flex-col items-center justify-center p-1 text-cream">
-              <span class="font-headline text-xs leading-none">06.12</span>
-              <span class="text-[6.5px] uppercase tracking-widest mt-1 text-cream-warm">Resepsi</span>
-            </div>
-          </div>
-
-          <!-- Bottom Film Sprockets -->
-          <div class="flex justify-between gap-1 mt-1.5 px-0.5" aria-hidden="true">
-            <span class="w-2.5 h-1.5 rounded-[1px] bg-cream"></span>
-            <span class="w-2.5 h-1.5 rounded-[1px] bg-cream"></span>
-            <span class="w-2.5 h-1.5 rounded-[1px] bg-cream"></span>
-            <span class="w-2.5 h-1.5 rounded-[1px] bg-cream"></span>
-            <span class="w-2.5 h-1.5 rounded-[1px] bg-cream"></span>
-            <span class="w-2.5 h-1.5 rounded-[1px] bg-cream"></span>
-            <span class="w-2.5 h-1.5 rounded-[1px] bg-cream"></span>
-            <span class="w-2.5 h-1.5 rounded-[1px] bg-cream"></span>
-            <span class="w-2.5 h-1.5 rounded-[1px] bg-cream"></span>
-            <span class="w-2.5 h-1.5 rounded-[1px] bg-cream"></span>
-          </div>
-        </div>
-
-        <!-- Perforated Tear-Off Divider with Side Notches -->
-        <div class="relative my-5 flex items-center" aria-hidden="true">
-          <span class="absolute -left-8 w-6 h-6 rounded-full bg-burgundy"></span>
-          <div class="w-full border-t border-dashed border-burgundy/45"></div>
-          <span class="absolute -right-8 w-6 h-6 rounded-full bg-burgundy"></span>
-        </div>
-
-        <!-- Ticket Stub: Kepada Yth & Barcode -->
-        <div class="text-center">
-          <p class="font-script text-[28px] leading-none text-burgundy">
-            Kepada Yth.
-          </p>
-          <p class="text-[9px] uppercase tracking-[0.2em] text-burgundy-soft mt-1">
-            Bapak / Ibu / Saudara / i:
-          </p>
-          <p id="guest-name-display" class="mt-1 font-headline text-2xl font-semibold text-burgundy break-words">
-            Tamu Undangan
-          </p>
-
-          <!-- SVG Barcode -->
-          <svg
-            class="mx-auto mt-3.5 w-52 h-8 text-burgundy"
-            viewBox="0 0 210 32"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <rect x="2" y="0" width="2" height="32" />
-            <rect x="6" y="0" width="4" height="32" />
-            <rect x="13" y="0" width="1.5" height="32" />
-            <rect x="17" y="0" width="3" height="32" />
-            <rect x="23" y="0" width="1.5" height="32" />
-            <rect x="27" y="0" width="5" height="32" />
-            <rect x="35" y="0" width="2" height="32" />
-            <rect x="40" y="0" width="1.5" height="32" />
-            <rect x="44" y="0" width="4" height="32" />
-            <rect x="51" y="0" width="2" height="32" />
-            <rect x="56" y="0" width="3" height="32" />
-            <rect x="62" y="0" width="1.5" height="32" />
-            <rect x="66" y="0" width="5" height="32" />
-            <rect x="74" y="0" width="2" height="32" />
-            <rect x="79" y="0" width="3.5" height="32" />
-            <rect x="85" y="0" width="1.5" height="32" />
-            <rect x="90" y="0" width="4" height="32" />
-            <rect x="97" y="0" width="2" height="32" />
-            <rect x="102" y="0" width="1.5" height="32" />
-            <rect x="106" y="0" width="5" height="32" />
-            <rect x="114" y="0" width="2.5" height="32" />
-            <rect x="119" y="0" width="1.5" height="32" />
-            <rect x="123" y="0" width="4" height="32" />
-            <rect x="130" y="0" width="2" height="32" />
-            <rect x="135" y="0" width="3" height="32" />
-            <rect x="141" y="0" width="1.5" height="32" />
-            <rect x="145" y="0" width="4.5" height="32" />
-            <rect x="152" y="0" width="2" height="32" />
-            <rect x="157" y="0" width="1.5" height="32" />
-            <rect x="161" y="0" width="4" height="32" />
-            <rect x="168" y="0" width="2.5" height="32" />
-            <rect x="173" y="0" width="1.5" height="32" />
-            <rect x="177" y="0" width="5" height="32" />
-            <rect x="185" y="0" width="2" height="32" />
-            <rect x="190" y="0" width="3" height="32" />
-            <rect x="196" y="0" width="1.5" height="32" />
-            <rect x="200" y="0" width="4" height="32" />
-            <rect x="206" y="0" width="2" height="32" />
-          </svg>
-          <p class="mt-2 text-[7.5px] uppercase tracking-[0.22em] text-burgundy-soft">
-            A Love Story by Komalasari &amp; Najmudin
-          </p>
-        </div>
-
-        <!-- Buka Undangan CTA Button -->
-        <div class="mt-5 flex justify-center">
+        <!-- Buka Undangan CTA Button below Wax Seal inside Burgundy Envelope -->
+        <div class="absolute top-[79.5%] left-[16%] right-[16%] flex justify-center">
           <button
             id="btn-open-invitation"
             type="button"
-            class="min-h-[48px] w-full max-w-[260px] px-6 py-3 rounded-full bg-burgundy hover:bg-burgundy-deep text-cream text-[11px] font-medium uppercase tracking-[0.2em] inline-flex items-center justify-center gap-2 shadow-lg active:scale-[0.99] transition-all"
+            class="min-h-[48px] w-full max-w-[230px] px-6 py-3 rounded-full bg-cream hover:bg-cream-warm text-burgundy border border-champagne/60 text-[11px] font-semibold uppercase tracking-[0.18em] inline-flex items-center justify-center gap-2 shadow-lg active:scale-[0.99] transition-all"
           >
             <span>Buka Undangan</span>
             <span aria-hidden="true">&rsaquo;</span>
@@ -384,37 +264,17 @@
       </div>
     </div>
 
-    <p class="text-center text-[10px] tracking-[0.14em] uppercase text-cream-warm pt-3">
-      Ketuk untuk membuka &amp; memutar musik
+    <p class="text-center text-[11px] text-cream-warm/90 pt-2">
+      Ketuk Buka Undangan untuk membuka &amp; memutar musik
     </p>
   </section>
 
   <!-- ==================== 2. MAIN MOBILE-FIRST SHELL (MAX-WIDTH 480PX) ==================== -->
   <div class="relative w-full max-w-[480px] min-h-screen burgundy-canvas border-x border-cream/10 shadow-[0_0_60px_rgba(0,0,0,0.65)] flex flex-col overflow-x-hidden">
-    <!-- Compact Top Sticky Quick Navigation -->
-    <nav
-      id="top-nav"
-      aria-label="Navigasi bagian undangan"
-      class="sticky top-0 z-30 bg-burgundy/95 border-b border-cream/15 px-3 py-1 flex items-center justify-between opacity-0 pointer-events-none transition-opacity duration-500"
-    >
-      <a
-        href="#hero-pembuka"
-        class="min-h-[44px] px-2 inline-flex items-center font-headline italic text-base text-cream hover:text-champagne shrink-0"
-      >
-        K &amp; N
-      </a>
-      <div class="flex items-center gap-0.5">
-        <a href="#section-acara" class="min-h-[44px] px-2.5 inline-flex items-center text-[9.5px] uppercase tracking-[0.16em] text-cream-warm hover:text-white rounded">Acara</a>
-        <a href="#section-lokasi" class="min-h-[44px] px-2.5 inline-flex items-center text-[9.5px] uppercase tracking-[0.16em] text-cream-warm hover:text-white rounded">Lokasi</a>
-        <a href="#section-rsvp" class="min-h-[44px] px-2.5 inline-flex items-center text-[9.5px] uppercase tracking-[0.16em] text-cream-warm hover:text-white rounded">RSVP</a>
-        <a href="#section-amplop" class="min-h-[44px] px-2.5 inline-flex items-center text-[9.5px] uppercase tracking-[0.16em] text-cream-warm hover:text-white rounded">Amplop</a>
-      </div>
-    </nav>
-
     <main id="main-content" tabindex="-1" class="flex-1 outline-none">
       <!-- ==================== HERO TICKET + GREETING + AYAT + MEMPELAI ==================== -->
-      <header id="hero-pembuka" class="px-5 pt-6 pb-10">
-        <!-- Hero Vintage Ticket Card (Reference Top Section) -->
+      <header id="hero-pembuka" class="px-5 pt-7 pb-10">
+        <!-- Hero Vintage Ticket Card -->
         <div
           data-aos="fade-up"
           class="relative w-full bg-cream text-burgundy cream-surface px-5 pt-7 pb-6 shadow-xl overflow-hidden"
@@ -424,35 +284,35 @@
           <span class="pointer-events-none absolute -bottom-3.5 -left-3.5 w-7 h-7 rounded-full bg-burgundy" aria-hidden="true"></span>
           <span class="pointer-events-none absolute -bottom-3.5 -right-3.5 w-7 h-7 rounded-full bg-burgundy" aria-hidden="true"></span>
 
-          <div class="text-center">
-            <h2 class="font-headline text-[28px] leading-none uppercase tracking-[0.06em] text-burgundy">
+          <div class="text-center space-y-2">
+            <h2 class="font-display-medium text-[30px] sm:text-[32px] leading-[1.15] uppercase tracking-[0.08em] text-burgundy">
               UNDANGAN
             </h2>
-            <p class="font-script text-[28px] leading-none text-burgundy-soft -mt-1">
+            <p class="font-script text-[28px] leading-snug text-burgundy-soft pt-0.5">
               Walimatul &lsquo;Ursy
             </p>
-            <p class="mt-2 text-[8.5px] uppercase tracking-[0.24em] text-burgundy-soft font-medium">
-              Dengan Memohon Ridho Allah SWT
+            <p class="pt-1 text-[11px] text-burgundy-soft font-medium">
+              Dengan memohon ridho Allah SWT
             </p>
           </div>
 
-          <div class="mt-3 border-y border-burgundy/35 grid grid-cols-[1.1fr_0.9fr] items-stretch">
-            <div class="py-2.5 pr-3 border-r border-burgundy/35 flex flex-col justify-center">
-              <p class="font-headline text-[16px] leading-[1.15] uppercase tracking-wide text-burgundy font-medium">
+          <div class="mt-4 border-y border-burgundy/35 grid grid-cols-[1.15fr_0.85fr] items-stretch">
+            <div class="py-3.5 pr-3.5 border-r border-burgundy/35 flex flex-col justify-center">
+              <p class="font-display-medium text-[17px] sm:text-[18px] leading-[1.35] uppercase tracking-[0.04em] text-burgundy">
                 Komalasari &amp;<br />Najmudin
               </p>
             </div>
-            <div class="py-2 pl-3 flex items-center justify-center gap-2">
-              <span class="font-headline text-[36px] leading-none text-burgundy tabular-nums">06</span>
-              <div class="text-left leading-tight">
-                <span class="block text-[9px] uppercase tracking-[0.16em] font-semibold text-burgundy">Desember</span>
-                <span class="block text-[9px] uppercase tracking-[0.16em] text-burgundy-soft">2026</span>
+            <div class="py-3 pl-3.5 flex items-center justify-center gap-2.5">
+              <span class="font-display-medium text-[36px] leading-none text-burgundy tabular-nums">06</span>
+              <div class="text-left leading-tight space-y-0.5">
+                <span class="block text-[9.5px] uppercase tracking-[0.16em] font-semibold text-burgundy">Desember</span>
+                <span class="block text-[9.5px] uppercase tracking-[0.16em] text-burgundy-soft">2026</span>
               </div>
             </div>
           </div>
 
-          <!-- 35mm Filmstrip -->
-          <div class="mt-4 bg-[#1B1716] px-2 py-1.5 rounded-[2px]">
+          <!-- 35mm Filmstrip (Clean Empty Film Frames) -->
+          <div class="mt-5 bg-[#1B1716] px-2.5 py-2 rounded-[2px]">
             <div class="flex justify-between gap-1 mb-1.5 px-0.5" aria-hidden="true">
               <span class="w-2.5 h-1.5 rounded-[1px] bg-cream"></span>
               <span class="w-2.5 h-1.5 rounded-[1px] bg-cream"></span>
@@ -465,25 +325,11 @@
               <span class="w-2.5 h-1.5 rounded-[1px] bg-cream"></span>
               <span class="w-2.5 h-1.5 rounded-[1px] bg-cream"></span>
             </div>
-            <div class="grid grid-cols-4 gap-1">
-              <div class="aspect-square bg-[#2D2625] border border-cream/20 flex flex-col items-center justify-center p-1 text-cream">
-                <span class="font-headline italic text-sm leading-none">K&amp;N</span>
-                <span class="text-[6.5px] uppercase tracking-widest mt-1 text-cream-warm">Monogram</span>
-              </div>
-              <div class="aspect-square bg-[#241E1E] border border-cream/20 flex items-center justify-center p-1">
-                <svg width="28" height="22" viewBox="0 0 40 28" fill="none" class="text-cream-warm" aria-hidden="true">
-                  <circle cx="15" cy="14" r="8.5" stroke="currentColor" stroke-width="1.2" />
-                  <circle cx="25" cy="14" r="8.5" stroke="currentColor" stroke-width="1.2" />
-                </svg>
-              </div>
-              <div class="aspect-square bg-[#2D2625] border border-cream/20 flex flex-col items-center justify-center p-1 text-cream">
-                <span class="font-headline text-xs leading-none">02.12</span>
-                <span class="text-[6.5px] uppercase tracking-widest mt-1 text-cream-warm">Akad</span>
-              </div>
-              <div class="aspect-square bg-[#241E1E] border border-cream/20 flex flex-col items-center justify-center p-1 text-cream">
-                <span class="font-headline text-xs leading-none">06.12</span>
-                <span class="text-[6.5px] uppercase tracking-widest mt-1 text-cream-warm">Resepsi</span>
-              </div>
+            <div class="grid grid-cols-4 gap-1.5" aria-hidden="true">
+              <div class="aspect-square bg-[#2A2322] border border-cream/15"></div>
+              <div class="aspect-square bg-[#241E1E] border border-cream/15"></div>
+              <div class="aspect-square bg-[#2A2322] border border-cream/15"></div>
+              <div class="aspect-square bg-[#241E1E] border border-cream/15"></div>
             </div>
             <div class="flex justify-between gap-1 mt-1.5 px-0.5" aria-hidden="true">
               <span class="w-2.5 h-1.5 rounded-[1px] bg-cream"></span>
@@ -500,19 +346,19 @@
           </div>
 
           <!-- Dashed Perforation -->
-          <div class="relative my-4 flex items-center" aria-hidden="true">
+          <div class="relative my-5 flex items-center" aria-hidden="true">
             <span class="absolute -left-8 w-6 h-6 rounded-full bg-burgundy"></span>
             <div class="w-full border-t border-dashed border-burgundy/45"></div>
             <span class="absolute -right-8 w-6 h-6 rounded-full bg-burgundy"></span>
           </div>
 
-          <div class="text-center">
-            <p class="font-script text-[25px] leading-none text-burgundy">Tiket Tamu</p>
-            <p id="hero-guest-badge" class="mt-1 font-headline text-lg font-semibold text-burgundy">
+          <div class="text-center space-y-1.5">
+            <p class="font-script text-[25px] leading-snug text-burgundy">Tiket Tamu</p>
+            <p id="hero-guest-badge" class="font-display-medium text-lg leading-snug text-burgundy">
               Tamu Undangan
             </p>
             <svg
-              class="mx-auto mt-2.5 w-48 h-7 text-burgundy"
+              class="mx-auto pt-1 w-48 h-8 text-burgundy"
               viewBox="0 0 210 32"
               fill="currentColor"
               aria-hidden="true"
@@ -556,38 +402,53 @@
               <rect x="200" y="0" width="4" height="32" />
               <rect x="206" y="0" width="2" height="32" />
             </svg>
-            <p class="mt-1.5 text-[7px] uppercase tracking-[0.22em] text-burgundy-soft">
+            <p class="pt-1 text-[7.5px] uppercase tracking-[0.22em] text-burgundy-soft">
               A Love Story by Komalasari &amp; Najmudin
             </p>
           </div>
         </div>
 
-        <!-- Greeting & Ayat Section (Matches "Дорогие родные и близкие!" & "Story of love" on Burgundy) -->
-        <div data-aos="fade-up" class="mt-10 text-center space-y-4">
-          <p class="font-script text-[32px] leading-tight text-cream">
-            Keluarga &amp; Sahabat Tercinta
-          </p>
-          <p class="text-[11px] uppercase tracking-[0.18em] leading-relaxed text-cream-warm max-w-xs mx-auto">
-            Assalamu&rsquo;alaikum Warahmatullahi Wabarakatuh. Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk berbagi kebahagiaan di hari pernikahan kami.
-          </p>
+        <!-- Greeting & Ayat Section (Foto 2: Textured Wax-Sealed Parchment Background) -->
+        <div data-aos="fade-up" class="relative mt-6 w-full max-w-[420px] aspect-[375/666] mx-auto">
+          <img
+            src="assets/images/quran-paper.png"
+            alt="Kertas berstempel lilin burgundy untuk sambutan dan ayat suci Al-Qur'an"
+            width="375"
+            height="666"
+            loading="lazy"
+            class="absolute inset-0 w-full h-full object-contain pointer-events-none select-none"
+          />
 
-          <!-- QS. Ar-Rum: 21 -->
-          <div class="pt-4">
-            <p class="font-script text-[30px] leading-none text-champagne mb-3">
-              QS. Ar-Rum: 21
-            </p>
-            <blockquote class="text-[11.5px] uppercase tracking-[0.12em] leading-relaxed text-cream-warm max-w-sm mx-auto">
-              &ldquo;Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.&rdquo;
-            </blockquote>
+          <div class="relative z-10 h-full pt-[27%] pb-10 px-[12%] flex flex-col justify-center text-center cream-surface space-y-4">
+            <div class="space-y-2">
+              <p class="font-script text-[30px] sm:text-[34px] leading-tight text-burgundy">
+                Keluarga &amp; Sahabat Tercinta
+              </p>
+              <p class="text-[11.5px] sm:text-xs leading-relaxed text-burgundy-soft max-w-xs mx-auto">
+                Assalamu&rsquo;alaikum Warahmatullahi Wabarakatuh. Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk berbagi kebahagiaan di hari pernikahan kami.
+              </p>
+            </div>
+
+            <div class="w-12 h-[1px] bg-burgundy/25 mx-auto" aria-hidden="true"></div>
+
+            <!-- QS. Ar-Rum: 21 -->
+            <div class="space-y-2">
+              <p class="font-script text-[26px] sm:text-[30px] leading-none text-burgundy">
+                QS. Ar-Rum: 21
+              </p>
+              <blockquote class="text-[11.5px] sm:text-xs leading-relaxed text-burgundy-soft max-w-xs mx-auto">
+                &ldquo;Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.&rdquo;
+              </blockquote>
+            </div>
           </div>
         </div>
 
-        <!-- Profil Kedua Mempelai -->
-        <div data-aos="fade-up" class="mt-10 pt-6 border-t border-cream/20 text-center space-y-6">
-          <div>
+        <!-- Profil Kedua Mempelai (Menggunakan font-script senada dengan judul Lokasi) -->
+        <div data-aos="fade-up" class="mt-10 pt-7 border-t border-cream/20 text-center space-y-7">
+          <div class="space-y-1.5">
             <p class="text-[10px] uppercase tracking-[0.24em] text-champagne">Mempelai Wanita</p>
-            <h2 class="font-headline text-[32px] leading-tight text-cream mt-1">Komalasari</h2>
-            <p class="mt-1 text-xs text-cream-warm">
+            <h2 class="font-script text-[42px] sm:text-[46px] leading-tight text-cream">Komalasari</h2>
+            <p class="text-xs text-cream-warm leading-relaxed">
               Putri dari <span class="font-medium text-cream">Keluarga Bpk. Ya&rsquo;yat Ruhiyat &amp; Ibu Iis</span>
             </p>
           </div>
@@ -598,10 +459,10 @@
             <span class="w-10 h-[1px] bg-cream/30"></span>
           </div>
 
-          <div>
+          <div class="space-y-1.5">
             <p class="text-[10px] uppercase tracking-[0.24em] text-champagne">Mempelai Pria</p>
-            <h2 class="font-headline text-[32px] leading-tight text-cream mt-1">Najmudin</h2>
-            <p class="mt-1 text-xs text-cream-warm">
+            <h2 class="font-script text-[42px] sm:text-[46px] leading-tight text-cream">Najmudin</h2>
+            <p class="text-xs text-cream-warm leading-relaxed">
               Putra dari <span class="font-medium text-cream">Keluarga Bpk. Solahudin &amp; Ibu Aminah</span>
             </p>
           </div>
@@ -642,21 +503,21 @@
             </p>
           </div>
 
-          <!-- Vertical Stacked Schedule (Reference 15:30 / 16:00 / 17:00) + Glassmorphism Cards -->
+          <!-- Vertical Stacked Schedule + Glassmorphism Cards -->
           <div class="space-y-4">
             <article
               data-aos="fade-up"
               class="event-glass-card rounded-xl p-5 text-center"
             >
-              <p class="font-headline text-3xl text-cream tracking-wide">08:00</p>
-              <p class="text-[10px] uppercase tracking-[0.22em] text-champagne mt-1 font-medium">
+              <p class="font-display-medium text-3xl text-cream tracking-wide">13:00</p>
+              <p class="text-[10px] uppercase tracking-[0.22em] text-champagne mt-1.5 font-medium">
                 Akad Nikah
               </p>
               <p class="mt-2 text-xs text-cream font-medium">
                 Hari Rabu, 02 Desember 2026
               </p>
               <p class="text-xs text-cream-warm mt-0.5">
-                Pukul 08.00 WIB - Selesai
+                Pukul 13.00 WIB - Selesai
               </p>
             </article>
 
@@ -665,8 +526,8 @@
               data-aos-delay="80"
               class="event-glass-card rounded-xl p-5 text-center"
             >
-              <p class="font-headline text-3xl text-cream tracking-wide">10:00</p>
-              <p class="text-[10px] uppercase tracking-[0.22em] text-champagne mt-1 font-medium">
+              <p class="font-display-medium text-3xl text-cream tracking-wide">10:00</p>
+              <p class="text-[10px] uppercase tracking-[0.22em] text-champagne mt-1.5 font-medium">
                 Resepsi Pernikahan
               </p>
               <p class="mt-2 text-xs text-cream font-medium">
@@ -678,129 +539,17 @@
             </article>
           </div>
         </div>
-
-        <!-- ==================== CREAM SECTION WITH VINTAGE LACE ARCH & DRESSCODE PANTONE ==================== -->
-        <div class="relative cream-canvas text-burgundy cream-surface">
-          <!-- Curved Burgundy Arch Hanging Down + Intricate Lace Scallop SVG Border -->
-          <div class="relative w-full overflow-hidden leading-none" aria-hidden="true">
-            <svg viewBox="0 0 480 120" class="w-full h-auto block">
-              <!-- Burgundy downward dome fill -->
-              <path d="M0,0 L480,0 L480,18 Q240,108 0,18 Z" fill="#3B0A10" />
-
-              <!-- Intricate Repeating Vintage Floral Lace Medallions hugging the curve -->
-              <g fill="none" stroke="#3B0A10" stroke-width="1.2">
-                <!-- Scallop 1 (far left) -->
-                <path d="M0,18 Q40,68 80,41" stroke-width="1.6" />
-                <path d="M8,22 Q40,56 72,39" stroke-dasharray="3 2" />
-                <circle cx="40" cy="40" r="9" />
-                <circle cx="40" cy="40" r="3" fill="#3B0A10" />
-                <path d="M26,32 L40,54 L54,42" stroke-width="0.9" />
-
-                <!-- Scallop 2 (mid-left) -->
-                <path d="M80,41 Q122,90 164,58" stroke-width="1.6" />
-                <path d="M88,43 Q122,76 156,56" stroke-dasharray="3 2" />
-                <circle cx="122" cy="58" r="10" />
-                <circle cx="122" cy="58" r="3.2" fill="#3B0A10" />
-                <path d="M106,50 L122,74 L138,56" stroke-width="0.9" />
-
-                <!-- Scallop 3 (center crest) -->
-                <path d="M164,58 Q240,116 316,58" stroke-width="1.8" />
-                <path d="M174,60 Q240,102 306,60" stroke-dasharray="3 2" />
-                <circle cx="240" cy="76" r="13" />
-                <circle cx="240" cy="76" r="4" fill="#3B0A10" />
-                <path d="M214,68 L240,98 L266,68 M225,65 L240,88 L255,65" stroke-width="0.95" />
-                <circle cx="204" cy="74" r="5" />
-                <circle cx="276" cy="74" r="5" />
-
-                <!-- Scallop 4 (mid-right) -->
-                <path d="M316,58 Q358,90 400,41" stroke-width="1.6" />
-                <path d="M324,56 Q358,76 392,43" stroke-dasharray="3 2" />
-                <circle cx="358" cy="58" r="10" />
-                <circle cx="358" cy="58" r="3.2" fill="#3B0A10" />
-                <path d="M342,56 L358,74 L374,50" stroke-width="0.9" />
-
-                <!-- Scallop 5 (far right) -->
-                <path d="M400,41 Q440,68 480,18" stroke-width="1.6" />
-                <path d="M408,39 Q440,56 472,22" stroke-dasharray="3 2" />
-                <circle cx="440" cy="40" r="9" />
-                <circle cx="440" cy="40" r="3" fill="#3B0A10" />
-                <path d="M426,42 L440,54 L454,32" stroke-width="0.9" />
-
-                <!-- Hanging scalloped lace teardrops -->
-                <circle cx="40" cy="55" r="2.2" fill="#3B0A10" />
-                <circle cx="122" cy="78" r="2.2" fill="#3B0A10" />
-                <circle cx="240" cy="103" r="2.5" fill="#3B0A10" />
-                <circle cx="358" cy="78" r="2.2" fill="#3B0A10" />
-                <circle cx="440" cy="55" r="2.2" fill="#3B0A10" />
-              </g>
-            </svg>
-          </div>
-
-          <!-- DRESSCODE & PANTONE SWATCHES -->
-          <div data-aos="fade-up" class="px-6 pt-4 pb-8 text-center">
-            <h3 class="font-headline text-[28px] tracking-[0.14em] uppercase text-burgundy">
-              DRESSCODE
-            </h3>
-
-            <!-- 4 Pantone Swatch Cards -->
-            <div class="mt-6 grid grid-cols-4 gap-2">
-              <div class="bg-white border border-burgundy/20 shadow-xs flex flex-col">
-                <div class="h-20 bg-[#D8C7B8]"></div>
-                <div class="p-1.5 text-left">
-                  <span class="block text-[7.5px] font-bold tracking-wider text-burgundy">PANTONE&reg;</span>
-                  <span class="block text-[6.5px] uppercase text-burgundy-soft">Warm Sand</span>
-                </div>
-              </div>
-
-              <div class="bg-white border border-burgundy/20 shadow-xs flex flex-col">
-                <div class="h-20 bg-[#4A1018]"></div>
-                <div class="p-1.5 text-left">
-                  <span class="block text-[7.5px] font-bold tracking-wider text-burgundy">PANTONE&reg;</span>
-                  <span class="block text-[6.5px] uppercase text-burgundy-soft">Burgundy</span>
-                </div>
-              </div>
-
-              <div class="bg-white border border-burgundy/20 shadow-xs flex flex-col">
-                <div class="h-20 bg-gradient-to-br from-[#DFBE87] via-[#C69C62] to-[#9E753F]"></div>
-                <div class="p-1.5 text-left">
-                  <span class="block text-[7.5px] font-bold tracking-wider text-burgundy">PANTONE&reg;</span>
-                  <span class="block text-[6.5px] uppercase text-burgundy-soft">Champagne</span>
-                </div>
-              </div>
-
-              <div class="bg-white border border-burgundy/20 shadow-xs flex flex-col">
-                <div class="h-20 bg-[#5D4334]"></div>
-                <div class="p-1.5 text-left">
-                  <span class="block text-[7.5px] font-bold tracking-wider text-burgundy">PANTONE&reg;</span>
-                  <span class="block text-[6.5px] uppercase text-burgundy-soft">Espresso</span>
-                </div>
-              </div>
-            </div>
-
-            <p class="mt-6 text-[10px] uppercase tracking-[0.14em] leading-relaxed text-burgundy-soft">
-              Kami mengundang Bapak/Ibu/Saudara/i untuk mengenakan busana sopan &amp; formal bernuansa hangat senada dengan palet acara kami.
-            </p>
-            <p class="mt-3 font-script text-[26px] leading-tight text-burgundy">
-              Dengan penuh cinta, kami menantikan kehadiran Anda!
-            </p>
-          </div>
-
-          <!-- Smooth Arch Transition Back to Deep Burgundy -->
-          <svg viewBox="0 0 480 48" class="w-full h-auto block" aria-hidden="true">
-            <path d="M0,48 L0,10 Q240,52 480,10 L480,48 Z" fill="#3B0A10" />
-          </svg>
-        </div>
       </section>
 
-      <!-- ==================== LOKASI ACARA (MONOCHROME MAP + POSTAGE STAMP + WAX SEAL) ==================== -->
-      <section id="section-lokasi" class="pt-4 pb-8">
+      <!-- ==================== LOKASI ACARA (MONOCHROME MAP + POSTAGE STAMP CARD) ==================== -->
+      <section id="section-lokasi" class="pt-8 pb-8 border-t border-cream/15">
         <div data-aos="fade-up" class="text-center mb-5 px-5">
           <h2 class="font-script text-[38px] leading-none text-cream">
             Lokasi
           </h2>
         </div>
 
-        <!-- Monochrome Map Strip with Centered Postage Stamp Card & Wax Seal -->
+        <!-- Monochrome Map Strip with Centered Postage Stamp Card -->
         <div data-aos="fade-up" class="relative w-full py-6 px-6 flex items-center justify-center overflow-hidden">
           <img
             src="assets/images/cikancung-map.png"
@@ -814,15 +563,7 @@
 
           <!-- Postage Stamp Card -->
           <div class="relative z-10 w-full max-w-[300px] postage-stamp-card cream-surface shadow-2xl">
-            <!-- Top Center 3D Burgundy Wax Seal -->
-            <div
-              class="absolute -top-4 left-1/2 -translate-x-1/2 w-9 h-9 rounded-full burgundy-wax-seal flex items-center justify-center text-cream font-headline text-[10px] tracking-wider"
-              aria-hidden="true"
-            >
-              KN
-            </div>
-
-            <div class="bg-cream px-5 pt-7 pb-5 text-center">
+            <div class="bg-cream px-5 py-5 text-center">
               <p class="text-[9.5px] uppercase tracking-[0.22em] font-semibold text-burgundy">
                 Lokasi Acara
               </p>
@@ -840,7 +581,7 @@
                   <span>Buka Google Maps</span>
                 </a>
                 <a
-                  href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Komalasari+%26+Najmudin&dates=20261206T030000Z/20261206T070000Z&details=Resepsi+Pernikahan+Komalasari+%26+Najmudin.+Akad+Nikah+dilaksanakan+pada+Rabu%2C+02+Desember+2026+pukul+08.00+WIB.&location=Kp.+Cirungki+RT+02+RW+04%2C+Desa+Hegarmanah%2C+Kecamatan+Cikancung%2C+Kabupaten+Bandung"
+                  href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Komalasari+%26+Najmudin&dates=20261206T030000Z/20261206T070000Z&details=Resepsi+Pernikahan+Komalasari+%26+Najmudin.+Akad+Nikah+dilaksanakan+pada+Rabu%2C+02+Desember+2026+pukul+13.00+WIB.&location=Kp.+Cirungki+RT+02+RW+04%2C+Desa+Hegarmanah%2C+Kecamatan+Cikancung%2C+Kabupaten+Bandung"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="min-h-[44px] px-4 py-2 rounded-full bg-white border border-burgundy/35 hover:bg-cream-warm text-burgundy text-[10px] font-medium uppercase tracking-[0.16em] inline-flex items-center justify-center gap-1.5 transition-colors"
@@ -858,17 +599,20 @@
             <p class="text-[10px] uppercase tracking-[0.24em] text-champagne mb-3">
               Turut Mengundang
             </p>
-            <ul class="space-y-2 text-xs text-cream">
-              <li>01. K.H Dedi Supriadi</li>
+            <ul class="space-y-2.5 text-xs text-cream">
+              <li>
+                <span>01. K.H Dedi Supriadi</span>
+                <span class="block pl-5 text-[11px] text-champagne mt-0.5">(Pimpinan Ponpes Alhidayah)</span>
+              </li>
               <li>02. Kel. Besar Ust Ade Arifin dan Ibu Yoyom</li>
-              <li>03. Kel. Besar Bapak Koko dan Ibu Memeh</li>
+              <li>03. Kel. Besar Alm. Bapak Koko dan Ibu Memeh</li>
               <li>04. Bapak Jaelani dan Ibu Imas</li>
             </ul>
           </div>
 
-          <!-- Winding S-Curve Route & Dual Map Pins (Reference Lower-Left Motif) -->
+          <!-- Winding S-Curve Route & Dual Map Pins -->
           <div class="mt-4 flex items-center justify-between gap-4">
-            <p class="text-[10.5px] uppercase tracking-[0.14em] leading-relaxed text-cream-warm">
+            <p class="text-xs leading-relaxed text-cream-warm">
               Dengan senang hati kami menyambut kehadiran Bapak/Ibu/Saudara/i di lokasi acara.
             </p>
             <svg width="110" height="60" viewBox="0 0 110 60" fill="none" class="text-cream-warm shrink-0" aria-hidden="true">
@@ -912,7 +656,7 @@
             <h2 class="font-script text-[32px] leading-tight text-burgundy">
               Konfirmasi Tamu
             </h2>
-            <p class="mt-1 text-[8.5px] uppercase tracking-[0.16em] text-burgundy-soft font-medium">
+            <p class="mt-1.5 text-[11px] leading-snug text-burgundy-soft font-medium">
               Mohon isi konfirmasi kehadiran &amp; doa
             </p>
             <a
@@ -1069,7 +813,7 @@
         </div>
 
         <!-- Reference Fine-Line Icon Rows -->
-        <div data-aos="fade-up" class="mt-5 space-y-3.5 text-[10.5px] uppercase tracking-[0.12em] leading-relaxed text-cream-warm">
+        <div data-aos="fade-up" class="mt-5 space-y-3.5 text-xs leading-relaxed text-cream-warm">
           <div class="flex items-start gap-3">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="text-champagne shrink-0 mt-0.5" aria-hidden="true">
               <path d="M12 20V11M12 11C9 11 7 9 7 6.5C9 6.5 11 8 12 11ZM12 11C15 11 17 9 17 6.5C15 6.5 13 8 12 11Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" />
@@ -1085,32 +829,31 @@
           </div>
         </div>
 
-        <!-- Minimalist Debit Cards (Bank BCA & Bank BRI / DANA) -->
+        <!-- Minimalist DANA Cards -->
         <div class="mt-6 space-y-4">
           <div
             data-aos="fade-up"
             class="rounded-xl bg-cream text-burgundy cream-surface p-5 shadow-lg"
           >
             <div class="flex items-center justify-between">
-              <span class="text-xs font-semibold uppercase tracking-[0.18em] text-burgundy">Bank BCA</span>
+              <span class="text-xs font-semibold uppercase tracking-[0.18em] text-burgundy">DANA 1</span>
               <svg width="32" height="22" viewBox="0 0 34 24" fill="none" class="text-burgundy-soft" aria-hidden="true">
                 <rect x="1" y="1" width="32" height="22" rx="4" stroke="currentColor" stroke-width="1.1" />
                 <path d="M1 9H11M23 9H33M1 15H11M23 15H33M11 1V23M23 1V23" stroke="currentColor" stroke-width="0.9" />
               </svg>
             </div>
-            <p class="mt-4 text-[10px] uppercase tracking-widest text-burgundy-soft">No. Rekening</p>
-            <p class="font-headline text-[28px] tracking-wider font-medium text-burgundy tabular-nums">
-              1234567890
+            <p class="mt-4 text-[10px] uppercase tracking-widest text-burgundy-soft">Nomor DANA</p>
+            <p class="font-display-medium text-[28px] tracking-wider text-burgundy tabular-nums">
+              083196761172
             </p>
-            <p class="text-xs font-medium text-burgundy mt-0.5">a.n. Komalasari</p>
             <div class="mt-4 pt-3 border-t border-burgundy/20 flex justify-end">
               <button
                 type="button"
-                data-copy="1234567890"
-                data-label="No. Rekening Bank BCA (1234567890)"
+                data-copy="083196761172"
+                data-label="Nomor DANA 1 (083196761172)"
                 class="copy-account-btn min-h-[44px] px-5 py-2 rounded-full bg-burgundy hover:bg-burgundy-deep text-cream text-[10px] font-medium uppercase tracking-[0.16em] inline-flex items-center gap-2 transition-colors"
               >
-                <span>Salin No. Rekening</span>
+                <span>Salin Nomor</span>
               </button>
             </div>
           </div>
@@ -1121,22 +864,21 @@
             class="rounded-xl bg-cream text-burgundy cream-surface p-5 shadow-lg"
           >
             <div class="flex items-center justify-between">
-              <span class="text-xs font-semibold uppercase tracking-[0.18em] text-burgundy">Bank BRI / DANA</span>
+              <span class="text-xs font-semibold uppercase tracking-[0.18em] text-burgundy">DANA 2</span>
               <svg width="32" height="22" viewBox="0 0 34 24" fill="none" class="text-burgundy-soft" aria-hidden="true">
                 <rect x="1" y="1" width="32" height="22" rx="4" stroke="currentColor" stroke-width="1.1" />
                 <path d="M1 9H11M23 9H33M1 15H11M23 15H33M11 1V23M23 1V23" stroke="currentColor" stroke-width="0.9" />
               </svg>
             </div>
-            <p class="mt-4 text-[10px] uppercase tracking-widest text-burgundy-soft">Nomor Rekening / E-Wallet</p>
-            <p class="font-headline text-[28px] tracking-wider font-medium text-burgundy tabular-nums">
-              081234567890
+            <p class="mt-4 text-[10px] uppercase tracking-widest text-burgundy-soft">Nomor DANA</p>
+            <p class="font-display-medium text-[28px] tracking-wider text-burgundy tabular-nums">
+              081319734486
             </p>
-            <p class="text-xs font-medium text-burgundy mt-0.5">a.n. Najmudin</p>
             <div class="mt-4 pt-3 border-t border-burgundy/20 flex justify-end">
               <button
                 type="button"
-                data-copy="081234567890"
-                data-label="Nomor Bank BRI / DANA (081234567890)"
+                data-copy="081319734486"
+                data-label="Nomor DANA 2 (081319734486)"
                 class="copy-account-btn min-h-[44px] px-5 py-2 rounded-full bg-burgundy hover:bg-burgundy-deep text-cream text-[10px] font-medium uppercase tracking-[0.16em] inline-flex items-center gap-2 transition-colors"
               >
                 <span>Salin Nomor</span>
@@ -1267,7 +1009,6 @@
       const btnOpenInvitation = document.getElementById("btn-open-invitation");
       const guestNameDisplay = document.getElementById("guest-name-display");
       const heroGuestBadge = document.getElementById("hero-guest-badge");
-      const topNav = document.getElementById("top-nav");
 
       const audioEl = document.getElementById("wedding-audio");
       const floatingAudioWrap = document.getElementById("floating-audio-wrap");
@@ -1425,7 +1166,6 @@
         coverOverlay.setAttribute("aria-hidden", "true");
         document.body.classList.remove("cover-locked");
 
-        topNav.classList.remove("opacity-0", "pointer-events-none");
         floatingAudioWrap.classList.remove("opacity-0", "pointer-events-none");
 
         playWeddingAudioFromOffset();

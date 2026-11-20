@@ -9,11 +9,11 @@
     content="Halaman generator link undangan pernikahan digital Komalasari &amp; Najmudin untuk mengirim undangan personal via WhatsApp."
   />
 
-  <!-- Google Fonts: Cormorant Garamond, Bodoni Moda, Great Vibes & Poppins -->
+  <!-- Google Fonts: BeautiqueDisplay-Medium fallback (Playfair Display & Cormorant Garamond), Great Vibes & Montserrat -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap"
     rel="stylesheet"
   />
 
@@ -35,10 +35,11 @@
             "wa-hover": "#0E542A",
           },
           fontFamily: {
-            headline: ['"Bodoni Moda"', '"Cormorant Garamond"', "Georgia", "serif"],
+            display: ['"BeautiqueDisplay-Medium"', '"Beautique Display"', '"Playfair Display"', '"Cormorant Garamond"', "Georgia", "serif"],
+            headline: ['"BeautiqueDisplay-Medium"', '"Beautique Display"', '"Playfair Display"', '"Cormorant Garamond"', "Georgia", "serif"],
             serif: ['"Cormorant Garamond"', "Georgia", "serif"],
             script: ['"Great Vibes"', "cursive"],
-            sans: ['"Poppins"', "system-ui", "-apple-system", "sans-serif"],
+            sans: ['"Montserrat"', "system-ui", "-apple-system", "sans-serif"],
           },
         },
       },
@@ -57,9 +58,14 @@
     body {
       background-color: #240609;
       color: var(--text-cream);
-      font-family: "Poppins", system-ui, -apple-system, sans-serif;
+      font-family: "Montserrat", system-ui, -apple-system, sans-serif;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+    }
+
+    .font-display-medium {
+      font-family: "BeautiqueDisplay-Medium", "Beautique Display", "Playfair Display", "Cormorant Garamond", Georgia, serif;
+      font-weight: 500;
     }
 
     /* Base pointer cursor for all enabled interactive controls (R-39) */
@@ -133,22 +139,14 @@
   <!-- ==================== MOBILE-FIRST SHELL (MAX-WIDTH 480PX) ==================== -->
   <div class="relative w-full max-w-[480px] min-h-screen burgundy-canvas border-x border-cream/10 shadow-[0_0_60px_rgba(0,0,0,0.65)] flex flex-col overflow-x-hidden">
     <!-- ==================== HEADER ==================== -->
-    <header class="sticky top-0 z-30 bg-burgundy/95 border-b border-cream/15 px-4 py-3 flex items-center justify-between gap-3">
-      <div class="flex items-center gap-3 min-w-0">
-        <div
-          class="w-10 h-10 rounded-full burgundy-wax-seal border border-champagne/40 flex items-center justify-center font-headline text-xs tracking-wider text-cream shrink-0"
-          aria-hidden="true"
-        >
-          KN
-        </div>
-        <div class="min-w-0">
-          <p class="text-[9.5px] font-medium uppercase tracking-[0.22em] text-champagne truncate">
-            Komalasari &amp; Najmudin
-          </p>
-          <h1 class="font-headline text-lg sm:text-xl text-cream leading-tight truncate">
-            Generator Link Undangan
-          </h1>
-        </div>
+    <header class="sticky top-0 z-30 bg-burgundy/95 border-b border-cream/15 px-5 py-3 flex items-center justify-between gap-3">
+      <div class="min-w-0">
+        <p class="text-[9.5px] font-medium uppercase tracking-[0.22em] text-champagne truncate">
+          Komalasari &amp; Najmudin
+        </p>
+        <h1 class="font-display-medium text-lg sm:text-xl text-cream leading-tight truncate">
+          Generator Link Undangan
+        </h1>
       </div>
 
       <a
@@ -176,17 +174,17 @@
           <span class="pointer-events-none absolute -bottom-3.5 -right-3.5 w-7 h-7 rounded-full bg-burgundy" aria-hidden="true"></span>
 
           <!-- Ticket Top Heading -->
-          <div class="text-center">
+          <div class="text-center space-y-1.5">
             <p class="text-[8.5px] uppercase tracking-[0.28em] text-burgundy-soft font-medium">
               The Wedding of
             </p>
-            <h2 class="font-headline text-[26px] leading-none uppercase tracking-[0.06em] text-burgundy mt-1">
+            <h2 class="font-display-medium text-[26px] leading-[1.15] uppercase tracking-[0.06em] text-burgundy">
               KIRIM UNDANGAN
             </h2>
-            <p class="font-script text-[28px] leading-none text-burgundy-soft -mt-0.5">
+            <p class="font-script text-[28px] leading-snug text-burgundy-soft">
               Komalasari &amp; Najmudin
             </p>
-            <p class="mt-2 text-xs text-burgundy-soft leading-relaxed">
+            <p class="pt-1 text-xs text-burgundy-soft leading-relaxed">
               Ketik atau tempel daftar nama tamu (1 nama per baris), lalu ketuk <strong>Buat Daftar Link</strong>.
             </p>
           </div>
@@ -196,6 +194,34 @@
             <span class="absolute -left-8 w-6 h-6 rounded-full bg-burgundy"></span>
             <div class="w-full border-t border-dashed border-burgundy/40"></div>
             <span class="absolute -right-8 w-6 h-6 rounded-full bg-burgundy"></span>
+          </div>
+
+          <!-- Public Base URL Input Area -->
+          <div class="space-y-2 mb-5 pb-5 border-b border-dashed border-burgundy/25">
+            <div class="flex items-center justify-between gap-2">
+              <label for="public-base-url-input" class="block text-xs font-semibold uppercase tracking-[0.12em] text-burgundy">
+                Link Halaman Utama Undangan (GitHub / Domain Publik)
+              </label>
+              <span
+                id="base-url-status-badge"
+                class="px-2.5 py-0.5 rounded-full bg-[#F1F6F1] border border-[#1E5631]/35 text-[#1E5631] text-[10.5px] font-semibold shrink-0"
+              >
+                Link Publik Aktif
+              </span>
+            </div>
+
+            <input
+              id="public-base-url-input"
+              type="url"
+              inputmode="url"
+              value="https://munimabdul605-eng.github.io/undangan-komalasari-najmudin./"
+              placeholder="https://munimabdul605-eng.github.io/undangan-komalasari-najmudin./"
+              class="w-full min-h-[46px] px-3.5 py-2.5 rounded-xl bg-white border border-burgundy/30 text-sm text-burgundy placeholder:text-[#68504A]"
+            />
+
+            <p id="base-url-helper-text" class="text-[11px] text-burgundy-soft leading-relaxed">
+              Semua link tamu otomatis memakai alamat publik: https://munimabdul605-eng.github.io/undangan-komalasari-najmudin./
+            </p>
           </div>
 
           <!-- Guest Names Input Area -->
@@ -351,7 +377,10 @@
     (function () {
       "use strict";
 
+      const DEFAULT_PUBLIC_BASE_URL = "https://munimabdul605-eng.github.io/undangan-komalasari-najmudin./";
+
       const STORAGE_KEYS = {
+        BASE_URL: "undangan_kn_kirim_baseurl_v1",
         GUESTS: "undangan_kn_kirim_guests_v1",
         SENT_MAP: "undangan_kn_kirim_sent_v1",
       };
@@ -387,6 +416,9 @@
 
       // DOM Elements
       const generatorForm = document.getElementById("generator-form");
+      const publicBaseUrlInput = document.getElementById("public-base-url-input");
+      const baseUrlStatusBadge = document.getElementById("base-url-status-badge");
+      const baseUrlHelperText = document.getElementById("base-url-helper-text");
       const guestListInput = document.getElementById("guest-list-input");
       const guestLineCount = document.getElementById("guest-line-count");
       const btnFillSample = document.getElementById("btn-fill-sample");
@@ -406,27 +438,91 @@
       let toastTimer = null;
 
       // ==================== 1. BASE URL & MESSAGE BUILDER ====================
+      function isLocalAddress(url) {
+        const value = String(url || "").trim();
+        if (!value) {
+          return true;
+        }
+        return /^file:\/\//i.test(value) || /^(?:https?:\/\/)?(?:localhost|127\.0\.0\.1|\[::1\]|0\.0\.0\.0)(?::\d+)?(?:\/|$)/i.test(value);
+      }
+
+      function normalizeBaseUrl(rawInput) {
+        let value = String(rawInput || "").trim();
+        if (!value) {
+          return "";
+        }
+        value = value.split("?")[0].split("#")[0].trim();
+        if (!value) {
+          return "";
+        }
+        if (!/^[a-zA-Z][a-zA-Z0-9+.-]*:\/\//.test(value)) {
+          value = "https://" + value;
+        }
+        value = value.replace(/\/(index|kirim)\.html$/i, "/");
+        if (!value.endsWith("/")) {
+          value += "/";
+        }
+        return value;
+      }
+
       function detectBaseUrl() {
         try {
           const loc = window.location;
           if (!loc || !loc.href) {
-            return "http://127.0.0.1:4173/";
+            return DEFAULT_PUBLIC_BASE_URL;
           }
-          const cleanUrl = loc.href.split("?")[0].split("#")[0];
-          if (/\/kirim\.html$/i.test(cleanUrl)) {
-            return cleanUrl.replace(/\/kirim\.html$/i, "/");
+          const normalized = normalizeBaseUrl(loc.href);
+          if (!normalized || isLocalAddress(normalized)) {
+            return DEFAULT_PUBLIC_BASE_URL;
           }
-          if (cleanUrl.endsWith("/")) {
-            return cleanUrl;
-          }
-          return cleanUrl.replace(/\/[^/]*$/, "/");
+          return normalized;
         } catch (err) {
-          return "http://127.0.0.1:4173/";
+          return DEFAULT_PUBLIC_BASE_URL;
+        }
+      }
+
+      function getEffectiveBaseUrl() {
+        const customUrl = publicBaseUrlInput ? normalizeBaseUrl(publicBaseUrlInput.value) : "";
+        return customUrl || detectBaseUrl();
+      }
+
+      function updateBaseUrlStatusUI() {
+        const effectiveUrl = getEffectiveBaseUrl();
+        const isLocal = isLocalAddress(effectiveUrl);
+
+        if (baseUrlStatusBadge) {
+          baseUrlStatusBadge.classList.remove(
+            "bg-[#FDF2F2]",
+            "border-[#B91C1C]/35",
+            "text-[#991B1B]",
+            "bg-[#F1F6F1]",
+            "border-[#1E5631]/35",
+            "text-[#1E5631]"
+          );
+          if (isLocal) {
+            baseUrlStatusBadge.textContent = "Masih Localhost";
+            baseUrlStatusBadge.classList.add("bg-[#FDF2F2]", "border-[#B91C1C]/35", "text-[#991B1B]");
+          } else {
+            baseUrlStatusBadge.textContent = "Link Publik Aktif";
+            baseUrlStatusBadge.classList.add("bg-[#F1F6F1]", "border-[#1E5631]/35", "text-[#1E5631]");
+          }
+        }
+
+        if (baseUrlHelperText) {
+          if (isLocal) {
+            baseUrlHelperText.textContent =
+              "Saat ini preview memakai alamat lokal (" +
+              effectiveUrl +
+              "). Tempel link GitHub Pages / domain publik Anda di atas agar semua tamu bisa membukanya.";
+          } else {
+            baseUrlHelperText.textContent =
+              "Semua link tamu otomatis memakai alamat publik: " + effectiveUrl;
+          }
         }
       }
 
       function buildInvitationUrl(guestName) {
-        const baseUrl = detectBaseUrl();
+        const baseUrl = getEffectiveBaseUrl();
         const separator = baseUrl.indexOf("?") !== -1 ? "&" : "?";
         return baseUrl + separator + "to=" + encodeURIComponent(guestName);
       }
@@ -490,6 +586,9 @@
       }
 
       function saveDraftToLocalStorage() {
+        if (publicBaseUrlInput) {
+          safeSetStorage(STORAGE_KEYS.BASE_URL, publicBaseUrlInput.value.trim());
+        }
         safeSetStorage(STORAGE_KEYS.GUESTS, guestListInput.value);
         updateLineCounter();
 
@@ -507,9 +606,19 @@
       }
 
       function loadDraftFromLocalStorage() {
+        const savedBaseUrl = safeGetStorage(STORAGE_KEYS.BASE_URL);
+        const normalizedSavedUrl = savedBaseUrl ? normalizeBaseUrl(savedBaseUrl) : "";
+        if (publicBaseUrlInput) {
+          if (normalizedSavedUrl && !isLocalAddress(normalizedSavedUrl)) {
+            publicBaseUrlInput.value = savedBaseUrl;
+          } else {
+            publicBaseUrlInput.value = DEFAULT_PUBLIC_BASE_URL;
+          }
+        }
         const savedGuests = safeGetStorage(STORAGE_KEYS.GUESTS);
         guestListInput.value = savedGuests !== null ? savedGuests : SAMPLE_GUESTS;
         updateLineCounter();
+        updateBaseUrlStatusUI();
       }
 
       // ==================== 3. TOAST & STATUS HELPERS ====================
@@ -758,6 +867,14 @@
       }
 
       // ==================== 5. EVENT LISTENERS ====================
+      if (publicBaseUrlInput) {
+        publicBaseUrlInput.addEventListener("input", function () {
+          saveDraftToLocalStorage();
+          updateBaseUrlStatusUI();
+          renderGuestCards();
+        });
+      }
+
       guestListInput.addEventListener("input", function () {
         saveDraftToLocalStorage();
       });
@@ -783,6 +900,7 @@
       generatorForm.addEventListener("submit", function (event) {
         event.preventDefault();
         saveDraftToLocalStorage();
+        updateBaseUrlStatusUI();
         const guests = parseGuestLines(guestListInput.value);
 
         if (guests.length === 0) {
