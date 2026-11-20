@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<meta content="mobile_tab" name="shell-type"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "inverse-on-surface": "#f5f0eb",
+            "surface-container-highest": "#e6e2dd",
+            "outline": "#867274",
+            "primary-fixed": "#ffd9dc",
+            "secondary-fixed": "#ffdea5",
+            "on-background": "#1d1b19",
+            "error": "#ba1a1a",
+            "surface-tint": "#934652",
+            "background": "#fef8f3",
+            "secondary-fixed-dim": "#e9c176",
+            "surface-container-low": "#f8f3ee",
+            "secondary-container": "#fed488",
+            "surface-dim": "#ded9d4",
+            "surface-variant": "#e6e2dd",
+            "inverse-surface": "#32302d",
+            "on-surface": "#1d1b19",
+            "primary-fixed-dim": "#ffb2bb",
+            "inverse-primary": "#ffb2bb",
+            "tertiary-fixed": "#ffd9dd",
+            "on-tertiary-container": "#ce818d",
+            "on-primary": "#ffffff",
+            "secondary": "#775a19",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "on-surface-variant": "#534344",
+            "surface": "#fef8f3",
+            "on-error": "#ffffff",
+            "on-secondary-fixed": "#261900",
+            "tertiary-fixed-dim": "#ffb2bd",
+            "primary": "#3c0311",
+            "on-primary-fixed-variant": "#762f3b",
+            "surface-container": "#f2ede8",
+            "outline-variant": "#d9c1c2",
+            "on-secondary-fixed-variant": "#5d4201",
+            "on-secondary": "#ffffff",
+            "on-primary-fixed": "#3d0412",
+            "on-secondary-container": "#785a1a",
+            "on-error-container": "#93000a",
+            "error-container": "#ffdad6",
+            "primary-container": "#581825",
+            "on-primary-container": "#d77d89",
+            "on-tertiary-fixed": "#3a0815",
+            "surface-container-high": "#ece7e2",
+            "tertiary": "#380714",
+            "on-tertiary-fixed-variant": "#71333f",
+            "tertiary-container": "#531c28",
+            "surface-bright": "#fef8f3",
+            "wine": "#581825",
+            "wine-dark": "#3c0311",
+            "gold-champagne": "#c5a059",
+            "cream-card": "#faf4ee"
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px"
+          },
+          spacing: {
+            "space-md": "1rem",
+            "space-xl": "3rem",
+            "gutter-desktop": "2rem",
+            "margin-desktop": "3rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1.75rem",
+            "space-sm": "0.5rem",
+            "gutter": "1rem",
+            "margin": "1.25rem"
+          },
+          fontFamily: {
+            "label-md": ["Manrope", "sans-serif"],
+            "body-md": ["Manrope", "sans-serif"],
+            "body-lg": ["Manrope", "sans-serif"],
+            "headline-lg": ["Bodoni Moda", "serif"],
+            "headline-lg-mobile": ["Bodoni Moda", "serif"],
+            "headline-sm": ["Bodoni Moda", "serif"],
+            "display-lg": ["Bodoni Moda", "serif"],
+            "display-lg-mobile": ["Bodoni Moda", "serif"],
+            "headline-md": ["Bodoni Moda", "serif"],
+            "body-sm": ["Manrope", "sans-serif"],
+            "label-caps": ["Bodoni Moda", "serif"]
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    @layer base {
+      html, body {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        overscroll-behavior: none;
+        background-color: #fef8f3;
+        color: #1d1b19;
+        font-family: 'Manrope', sans-serif;
+      }
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      .pt-safe {
+        padding-top: env(safe-area-inset-top, 0px);
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    @keyframes spinSlow {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .animate-spin-slow {
+      animation: spinSlow 8s linear infinite;
+    }
+    .paper-texture {
+      background-image: radial-gradient(#d9c1c2 0.75px, transparent 0.75px), radial-gradient(#d9c1c2 0.75px, #fef8f3 0.75px);
+      background-size: 30px 30px;
+      background-position: 0 0, 15px 15px;
+    }
+  </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen relative selection:bg-primary-fixed selection:text-primary">
+<!-- Top App Header -->
+<header class="fixed top-0 inset-x-0 z-50 bg-[#fef8f3]/90 backdrop-blur-md pt-safe border-b border-[#e6e2dd]/60">
+<div class="h-16 px-gutter flex items-center justify-between max-w-lg mx-auto w-full">
+<div class="flex flex-col">
+<span class="font-label-caps text-[10px] tracking-[0.25em] text-[#762f3b] uppercase">The Wedding Of</span>
+<h1 class="font-headline-sm text-[20px] font-semibold tracking-wide text-wine-dark leading-tight">Jadwal Acara &amp; Lokasi</h1>
+</div>
+<!-- Wax Seal Motif Avatar -->
+<div class="w-9 h-9 rounded-full bg-gradient-to-br from-[#c9a86a] via-[#b89552] to-[#8d6f31] p-[1.5px] shadow-sm flex items-center justify-center">
+<div class="w-full h-full rounded-full bg-[#fef8f3] flex items-center justify-center border border-[#d9c1c2]/40">
+<span class="font-headline-sm text-xs font-bold text-wine">K&amp;N</span>
+</div>
+</div>
+</div>
+</header>
+<main class="flex flex-col relative w-full max-w-lg mx-auto px-gutter pt-20 pb-32">
+<div class="flex flex-col w-full gap-5">
+<!-- Hero Header inspired by Reference Details Card -->
+<div class="relative overflow-hidden rounded-2xl bg-gradient-to-b from-[#fbf4ed] to-[#f4ece3] border border-[#e8ded5] p-6 text-center shadow-[0_4px_24px_rgba(60,3,17,0.04)] mt-2">
+<!-- Elegant floral decorative corners in soft wine/rose tone -->
+<div class="absolute -top-10 -right-10 w-28 h-28 rounded-full bg-[#581825]/5 blur-xl pointer-events-none"></div>
+<div class="absolute -bottom-10 -left-10 w-28 h-28 rounded-full bg-[#c5a059]/10 blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-center gap-2 mb-2">
+<span class="h-[1px] w-6 bg-[#867274]/40"></span>
+<span class="material-symbols-outlined text-[#762f3b] text-[16px]">all_inclusive</span>
+<span class="h-[1px] w-6 bg-[#867274]/40"></span>
+</div>
+<span class="font-headline-sm text-[12px] uppercase tracking-[0.28em] text-[#762f3b] block mb-1">Rangkaian Acara</span>
+<h2 class="font-headline-lg-mobile text-[32px] md:text-[36px] text-wine-dark tracking-tight leading-none mb-1">
+          Komalasari <span class="italic font-normal font-serif text-[28px] text-[#867274]">&amp;</span> Najmudin
+        </h2>
+<div class="flex items-center justify-center gap-2 my-2 text-[#c5a059]">
+<span class="h-[0.5px] w-12 bg-[#c5a059]/50"></span>
+<span class="text-xs tracking-widest uppercase font-headline-sm">Desember 2026</span>
+<span class="h-[0.5px] w-12 bg-[#c5a059]/50"></span>
+</div>
+<p class="font-body-sm text-[13px] text-on-surface-variant max-w-xs mx-auto leading-relaxed mt-2">
+          Dengan memohon rahmat dan ridho Allah SWT, kami mengundang kehadiran Bapak/Ibu/Saudara/i untuk merayakan ikatan suci kami.
+        </p>
+</div>
+<!-- Elegant Countdown Timer in Deep Wine & Champagne -->
+<div class="rounded-2xl bg-gradient-to-br from-[#3c0311] via-[#4a101d] to-[#2c020c] text-white p-5 shadow-[0_8px_30px_rgba(60,3,17,0.18)] border border-[#ffb2bb]/20">
+<div class="flex items-center justify-between mb-4 pb-2 border-b border-[#ffd9dc]/15">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-[#ffdea5]">hourglass_top</span>
+<span class="font-headline-sm text-xs tracking-[0.2em] text-[#ffdea5] uppercase">Menuju Hari Bahagia</span>
+</div>
+<span class="text-[12px] text-[#ffd9dc]/80 font-body-sm tracking-wide">02 Des 2026</span>
+</div>
+<div class="grid grid-cols-4 gap-2 text-center" id="weddingCountdown">
+<div class="bg-black/25 backdrop-blur-sm rounded-xl py-2.5 px-1 border border-white/5">
+<span class="font-headline-sm text-[26px] font-normal text-white block leading-none" id="daysValue">650</span>
+<span class="font-label-caps text-[9px] uppercase tracking-[0.2em] text-[#ffd9dc]/70 mt-1 block">Hari</span>
+</div>
+<div class="bg-black/25 backdrop-blur-sm rounded-xl py-2.5 px-1 border border-white/5">
+<span class="font-headline-sm text-[26px] font-normal text-white block leading-none" id="hoursValue">14</span>
+<span class="font-label-caps text-[9px] uppercase tracking-[0.2em] text-[#ffd9dc]/70 mt-1 block">Jam</span>
+</div>
+<div class="bg-black/25 backdrop-blur-sm rounded-xl py-2.5 px-1 border border-white/5">
+<span class="font-headline-sm text-[26px] font-normal text-white block leading-none" id="minutesValue">32</span>
+<span class="font-label-caps text-[9px] uppercase tracking-[0.2em] text-[#ffd9dc]/70 mt-1 block">Menit</span>
+</div>
+<div class="bg-black/25 backdrop-blur-sm rounded-xl py-2.5 px-1 border border-white/5">
+<span class="font-headline-sm text-[26px] font-normal text-white block leading-none" id="secondsValue">45</span>
+<span class="font-label-caps text-[9px] uppercase tracking-[0.2em] text-[#ffd9dc]/70 mt-1 block">Detik</span>
+</div>
+</div>
+</div>
+<!-- Wedding Timeline Details: Styled after Reference Image 2 -->
+<div class="rounded-2xl bg-[#faf5f0] border border-[#e6ded6] p-6 shadow-[0_4px_24px_rgba(60,3,17,0.03)] relative overflow-hidden">
+<!-- Delicate watermark numerals & flower accent -->
+<div class="text-center mb-6">
+<span class="font-headline-sm text-[11px] uppercase tracking-[0.28em] text-[#762f3b] block mb-1">Rundown Agenda</span>
+<h3 class="font-headline-md text-2xl text-wine-dark tracking-wide font-normal uppercase">Wedding Details</h3>
+<div class="w-10 h-[1px] bg-[#c5a059] mx-auto mt-2"></div>
+</div>
+<div class="relative flex flex-col gap-6">
+<!-- Timeline Vertical Connecting Line -->
+<div class="absolute left-[23px] top-6 bottom-8 w-[1px] bg-dashed border-l border-dashed border-[#867274]/40"></div>
+<!-- Bagian Pertama: Akad Nikah -->
+<div class="relative flex items-start gap-4 z-10">
+<!-- Icon Node / Wax Motif Ring -->
+<div class="w-12 h-12 rounded-full bg-[#f4ebe1] border border-[#c5a059]/60 shadow-sm flex items-center justify-center shrink-0 text-wine">
+<span class="material-symbols-outlined text-[22px] text-wine">ring_volume</span>
+</div>
+<div class="flex-1 pt-1">
+<div class="flex items-baseline justify-between mb-0.5">
+<span class="font-headline-sm text-[11px] uppercase tracking-[0.2em] text-[#762f3b]">Bagian Pertama</span>
+<span class="font-headline-sm text-[12px] text-secondary font-semibold">08.00 WIB</span>
+</div>
+<h4 class="font-headline-sm text-lg text-wine-dark leading-snug">Akad Nikah</h4>
+<p class="font-body-sm text-[13px] text-on-surface-variant mt-0.5">Hari Rabu, 02 Desember 2026</p>
+<p class="font-body-sm text-[13px] text-on-surface-variant font-medium">Kediaman Mempelai Wanita</p>
+<!-- Simpan ke kalender button -->
+<button class="mt-3 inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-[#d9c1c2] bg-[#ffffff] hover:bg-[#f2ede8] text-wine-dark text-[12px] font-label-md transition-all active:scale-[0.98] shadow-sm" onclick="saveToCalendar('Akad Nikah Komalasari &amp; Najmudin', 'Kp. Cirungki RT 02 RW 04 Desa Hegarmanah, Cikancung, Bandung', '20261202T080000', '20261202T110000')">
+<span class="material-symbols-outlined text-[15px] text-[#762f3b]">calendar_add_on</span>
+<span>Simpan ke Kalender</span>
+</button>
+</div>
+</div>
+<!-- Bagian Kedua: Resepsi Pernikahan -->
+<div class="relative flex items-start gap-4 z-10">
+<!-- Icon Node Cake / Celebration -->
+<div class="w-12 h-12 rounded-full bg-[#f4ebe1] border border-[#c5a059]/60 shadow-sm flex items-center justify-center shrink-0 text-wine">
+<span class="material-symbols-outlined text-[22px] text-wine">cake</span>
+</div>
+<div class="flex-1 pt-1">
+<div class="flex items-baseline justify-between mb-0.5">
+<span class="font-headline-sm text-[11px] uppercase tracking-[0.2em] text-[#762f3b]">Bagian Kedua</span>
+<span class="font-headline-sm text-[12px] text-secondary font-semibold">10.00 – 14.00 WIB</span>
+</div>
+<h4 class="font-headline-sm text-lg text-wine-dark leading-snug">Resepsi Pernikahan</h4>
+<p class="font-body-sm text-[13px] text-on-surface-variant mt-0.5">Hari Minggu, 06 Desember 2026</p>
+<p class="font-body-sm text-[13px] text-on-surface-variant font-medium">Kediaman Mempelai Wanita</p>
+<!-- Simpan ke kalender button -->
+<button class="mt-3 inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-[#d9c1c2] bg-[#ffffff] hover:bg-[#f2ede8] text-wine-dark text-[12px] font-label-md transition-all active:scale-[0.98] shadow-sm" onclick="saveToCalendar('Resepsi Pernikahan Komalasari &amp; Najmudin', 'Kp. Cirungki RT 02 RW 04 Desa Hegarmanah, Cikancung, Bandung', '20261206T100000', '20261206T140000')">
+<span class="material-symbols-outlined text-[15px] text-[#762f3b]">calendar_add_on</span>
+<span>Simpan ke Kalender</span>
+</button>
+</div>
+</div>
+<!-- Dress Code / Etiket Kehadiran: Reference Feature -->
+<div class="relative flex items-start gap-4 z-10">
+<!-- Icon Node Dress / Attire -->
+<div class="w-12 h-12 rounded-full bg-[#f4ebe1] border border-[#c5a059]/60 shadow-sm flex items-center justify-center shrink-0 text-wine">
+<span class="material-symbols-outlined text-[22px] text-wine">styler</span>
+</div>
+<div class="flex-1 pt-1">
+<div class="flex items-baseline justify-between mb-0.5">
+<span class="font-headline-sm text-[11px] uppercase tracking-[0.2em] text-[#762f3b]">Pakaian &amp; Adab</span>
+<span class="font-headline-sm text-[12px] text-secondary font-semibold">Formal</span>
+</div>
+<h4 class="font-headline-sm text-lg text-wine-dark leading-snug">Dress Code &amp; Etiket</h4>
+<p class="font-body-sm text-[13px] text-on-surface-variant mt-0.5">Batik / Busana Formal &amp; Sopan</p>
+<p class="font-body-sm text-[12px] text-[#867274] italic">Warna Nuansa Maroon, Earth Tone &amp; Gold</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Lokasi & Petunjuk Arah -->
+<div class="rounded-2xl bg-[#faf5f0] border border-[#e6ded6] p-6 shadow-[0_4px_24px_rgba(60,3,17,0.03)] flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-[#581825]/10 text-wine flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">location_on</span>
+</div>
+<div>
+<span class="font-headline-sm text-[10px] uppercase tracking-[0.25em] text-[#762f3b]">Petunjuk Arah</span>
+<h3 class="font-headline-sm text-xl text-wine-dark leading-none">Lokasi Acara</h3>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full text-[10px] font-semibold tracking-wider uppercase bg-[#ffdea5]/40 text-[#775a19] border border-[#e9c176]/50">
+            Jawa Barat
+          </span>
+</div>
+<!-- Stylized Map Preview Container matching Ref image aesthetic -->
+<div class="relative w-full h-48 rounded-xl overflow-hidden shadow-inner bg-[#efe8e0] border border-[#ded5cb]">
+<div class="w-full h-full bg-cover bg-center flex flex-col justify-between p-3" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDZRVu-KGcKjT-V8mhi-suGQnF6Fq85tbkVCzdto5yIKGw1vVwX_Boy3ZkQFawWc23s1ORFoTNk8-dDnoe8kqEOG0wIRgDPycfMfhjLNhxqTvvg6RUv_RqXl5yvSFkt9UDmSI_Ds6g9LCXaf9R5RgYnPfN0L3-JK8QUrguDipjo2RjaLEqw-Umh0ZFiz6-xcny4VE7f2tDqQKSjHf_P6O9ePwPgg7v1RGam7RSuIksr'); filter: contrast(0.95) saturate(0.85);">
+<div class="flex justify-end">
+<span class="bg-wine-dark/85 backdrop-blur-md text-[#ffd9dc] text-[10px] tracking-wider font-semibold px-2.5 py-1 rounded-full uppercase shadow">
+                Kediaman Mempelai
+              </span>
+</div>
+<div class="bg-surface/95 backdrop-blur-md rounded-lg p-2.5 border border-[#d9c1c2]/50 shadow-md flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-0 pr-2">
+<span class="material-symbols-outlined text-wine text-[20px] shrink-0">pin_drop</span>
+<span class="font-headline-sm text-[13px] text-wine-dark font-medium truncate">Kp. Cirungki, Kec. Cikancung</span>
+</div>
+<span class="text-secondary text-[11px] font-label-md shrink-0">Kab. Bandung</span>
+</div>
+</div>
+</div>
+<!-- Complete Address Details Box -->
+<div class="bg-[#f3ede8] rounded-xl p-4 border border-[#e6e2dd] flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-[11px] uppercase tracking-[0.18em] text-[#762f3b]">Alamat Lengkap</span>
+<!-- Salin Alamat Badge/Button -->
+<button class="inline-flex items-center gap-1 text-[12px] font-label-md text-wine hover:text-wine-dark font-semibold px-2 py-0.5 rounded hover:bg-[#e6e2dd]/60 transition-colors" id="copyBtn" onclick="copyAddress()">
+<span class="material-symbols-outlined text-[15px]" id="copyIcon">content_copy</span>
+<span id="copyText">Salin Alamat</span>
+</button>
+</div>
+<p class="font-body-md text-[14px] text-on-surface leading-relaxed mt-0.5" id="addressContent">
+            Kp. Cirungki RT 02 RW 04 Desa Hegarmanah, Kecamatan Cikancung, Kabupaten Bandung, Jawa Barat
+          </p>
+</div>
+<!-- Primary CTA: Deep Burgundy Maps Button -->
+<a class="w-full h-12 rounded-xl bg-gradient-to-r from-wine-dark via-wine to-[#4d101e] text-white hover:opacity-95 active:scale-[0.98] transition-all flex items-center justify-center gap-2 font-headline-sm text-sm tracking-widest uppercase shadow-[0_6px_20px_rgba(60,3,17,0.22)] border border-[#ffb2bb]/20" href="https://maps.google.com/?q=Kp.+Cirungki+Desa+Hegarmanah+Kecamatan+Cikancung+Kabupaten+Bandung" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[19px] text-[#ffdea5]">near_me</span>
+<span>Buka Google Maps</span>
+</a>
+</div>
+<!-- Turut Mengundang Section (Host Families) -->
+<div class="rounded-2xl bg-[#faf5f0] border border-[#e6ded6] p-6 shadow-[0_4px_24px_rgba(60,3,17,0.03)] text-center flex flex-col items-center">
+<div class="w-8 h-[1px] bg-[#c5a059] mb-2"></div>
+<span class="font-headline-sm text-[11px] text-[#762f3b] uppercase tracking-[0.25em] mb-1">Ungkapan Hormat</span>
+<h4 class="font-headline-md text-xl text-wine-dark mb-4">Turut Mengundang</h4>
+<div class="w-full flex flex-col gap-2 font-body-md text-sm text-on-surface">
+<div class="py-2.5 px-3 bg-[#f3ede8] rounded-xl border border-[#ded8d2]">
+<span class="font-medium text-wine-dark">Keluarga Bpk. Ya'yat Ruhiyat &amp; Ibu Iis</span>
+</div>
+<div class="py-2.5 px-3 bg-[#f3ede8] rounded-xl border border-[#ded8d2]">
+<span class="font-medium text-wine-dark">Keluarga Bpk. Solahudin &amp; Ibu Aminah</span>
+</div>
+</div>
+<div class="flex items-center gap-2 my-4 w-full">
+<div class="h-[0.5px] flex-1 bg-[#d9c1c2]"></div>
+<span class="font-headline-sm text-[10px] text-[#867274] uppercase tracking-widest">Serta Kerabat</span>
+<div class="h-[0.5px] flex-1 bg-[#d9c1c2]"></div>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant max-w-sm leading-relaxed">
+          K.H Dedi Supriadi • Kel. Besar Ust Ade Arifin &amp; Ibu Yoyom • Kel. Besar Bapak Koko &amp; Ibu Memeh • Bapak Jaelani &amp; Ibu Imas
+        </p>
+</div>
+</div>
+<!-- Toast Notification -->
+<div class="fixed bottom-28 left-1/2 -translate-x-1/2 bg-wine-dark text-[#ffd9dc] px-4 py-2 rounded-full shadow-2xl text-xs font-label-md flex items-center gap-2 opacity-0 pointer-events-none transition-all duration-300 z-50 border border-[#ffb2bb]/20" id="toastNotification">
+<span class="material-symbols-outlined text-[16px] text-[#ffdea5]">check_circle</span>
+<span id="toastMessage">Alamat berhasil disalin</span>
+</div>
+</main>
+<!-- Floating Audio Player Button with Burgundy Accent -->
+<aside class="fixed right-4 bottom-24 z-50 pointer-events-auto">
+<button aria-label="Toggle Wedding Music" class="w-11 h-11 rounded-full bg-white/95 backdrop-blur-md shadow-[0_4px_16px_rgba(60,3,17,0.18)] border border-[#d9c1c2] flex items-center justify-center text-wine transition-transform active:scale-95">
+<span class="material-symbols-outlined text-[20px] animate-spin-slow">music_note</span>
+</button>
+</aside>
+<!-- Bottom Navigation Tab Bar in Burgundy & Cream -->
+<nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-[#fef8f3]/95 backdrop-blur-xl border-t border-[#e6ded6] shadow-[0_-4px_24px_rgba(60,3,17,0.06)]" data-active-classes="text-wine font-semibold">
+<div class="flex justify-around items-center h-16 max-w-lg mx-auto px-2">
+<a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-[#867274] hover:text-wine transition-colors" data-path="beranda" href="#">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+<span class="font-headline-sm text-[10px] uppercase tracking-wider">Sampul</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-[#867274] hover:text-wine transition-colors" data-path="mempelai" href="#">
+<span class="material-symbols-outlined text-[20px]">diversity_1</span>
+<span class="font-headline-sm text-[10px] uppercase tracking-wider">Mempelai</span>
+</a>
+<a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-wine font-semibold relative" data-path="jadwal-acara" href="#">
+<span class="material-symbols-outlined text-[22px]">calendar_today</span>
+<span class="font-headline-sm text-[10px] uppercase tracking-wider text-wine">Acara</span>
+<span class="absolute -bottom-1 w-6 h-[2px] bg-wine rounded-full"></span>
+</a>
+<a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-[#867274] hover:text-wine transition-colors" data-path="lokasi-peta" href="#">
+<span class="material-symbols-outlined text-[20px]">pin_drop</span>
+<span class="font-headline-sm text-[10px] uppercase tracking-wider">Lokasi</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-[#867274] hover:text-wine transition-colors" data-path="ucapan-rsvp" href="#">
+<span class="material-symbols-outlined text-[20px]">mark_email_read</span>
+<span class="font-headline-sm text-[10px] uppercase tracking-wider">RSVP</span>
+</a>
+</div>
+</nav>
+<script>
+    function copyAddress() {
+      const address = document.getElementById('addressContent').innerText.trim();
+      navigator.clipboard.writeText(address).then(() => {
+        const copyText = document.getElementById('copyText');
+        const copyIcon = document.getElementById('copyIcon');
+        const toast = document.getElementById('toastNotification');
+        
+        copyText.innerText = 'Tersalin!';
+        copyIcon.innerText = 'check';
+        
+        toast.classList.remove('opacity-0', 'pointer-events-none');
+        toast.classList.add('opacity-100');
+
+        setTimeout(() => {
+          copyText.innerText = 'Salin Alamat';
+          copyIcon.innerText = 'content_copy';
+          toast.classList.remove('opacity-100');
+          toast.classList.add('opacity-0', 'pointer-events-none');
+        }, 2500);
+      }).catch(() => {
+        alert('Alamat: ' + address);
+      });
+    }
+
+    function saveToCalendar(title, location, startIso, endIso) {
+      const calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${startIso}/${endIso}&location=${encodeURIComponent(location)}&details=${encodeURIComponent('Pernikahan Komalasari & Najmudin di Kp. Cirungki Desa Hegarmanah Kec. Cikancung')}`;
+      window.open(calendarUrl, '_blank');
+    }
+
+    function updateCountdown() {
+      const targetDate = new Date('2026-12-02T08:00:00+07:00').getTime();
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance > 0) {
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById('daysValue').innerText = days;
+        document.getElementById('hoursValue').innerText = hours;
+        document.getElementById('minutesValue').innerText = minutes;
+        document.getElementById('secondsValue').innerText = seconds;
+      }
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+</body></html>

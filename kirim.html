@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generator Link Undangan | Komalasari &amp; Najmudin</title>
+  <meta
+    name="description"
+    content="Halaman generator link undangan pernikahan digital Komalasari &amp; Najmudin untuk mengirim undangan personal via WhatsApp."
+  />
+
+  <!-- Google Fonts: Cormorant Garamond, Bodoni Moda, Great Vibes & Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            burgundy: "#3B0A10",
+            "burgundy-deep": "#2A060A",
+            "burgundy-soft": "#5A3A3D",
+            cream: "#F4EDE2",
+            "cream-warm": "#E6D7C4",
+            champagne: "#D9BC96",
+            gold: "#C69C62",
+            wa: "#126B36",
+            "wa-hover": "#0E542A",
+          },
+          fontFamily: {
+            headline: ['"Bodoni Moda"', '"Cormorant Garamond"', "Georgia", "serif"],
+            serif: ['"Cormorant Garamond"', "Georgia", "serif"],
+            script: ['"Great Vibes"', "cursive"],
+            sans: ['"Poppins"', "system-ui", "-apple-system", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    :root {
+      --bg-burgundy: #3b0a10;
+      --bg-cream: #f4ede2;
+      --text-cream: #f4ede2;
+      --text-burgundy: #3b0a10;
+    }
+
+    html,
+    body {
+      background-color: #240609;
+      color: var(--text-cream);
+      font-family: "Poppins", system-ui, -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Base pointer cursor for all enabled interactive controls (R-39) */
+    a[href],
+    button:not(:disabled),
+    summary,
+    select:not(:disabled),
+    label[for],
+    input[type="checkbox"]:not(:disabled) {
+      cursor: pointer;
+    }
+
+    button:disabled,
+    input:disabled,
+    textarea:disabled {
+      cursor: not-allowed;
+      opacity: 0.65;
+    }
+
+    /* High-contrast visible focus indicator (R-32) */
+    :focus-visible {
+      outline: 2px solid #d9bc96;
+      outline-offset: 2px;
+    }
+
+    .cream-surface :focus-visible {
+      outline: 2px solid #3b0a10;
+      outline-offset: 2px;
+    }
+
+    /* Oxblood Burgundy paper grain & golden light flare matching index.html */
+    .burgundy-canvas {
+      background-color: #3b0a10;
+      background-image:
+        radial-gradient(ellipse at 92% 30%, rgba(217, 188, 150, 0.16) 0%, rgba(198, 156, 98, 0.05) 36%, transparent 64%),
+        radial-gradient(circle at 12% 85%, rgba(255, 220, 185, 0.06) 0%, transparent 45%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
+    }
+
+    .cream-canvas {
+      background-color: #f4ede2;
+      background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+    }
+
+    /* 3D Burgundy Wax Seal badge */
+    .burgundy-wax-seal {
+      background: radial-gradient(circle at 35% 30%, #7d1b28 0%, #520e17 55%, #2d050a 100%);
+      box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.45),
+        inset 0 1.5px 2px rgba(255, 210, 210, 0.35),
+        inset 0 -2px 4px rgba(15, 1, 3, 0.75);
+    }
+
+    #toast-notification {
+      transition: transform 0.28s ease, opacity 0.28s ease;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      #toast-notification {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen flex justify-center selection:bg-champagne selection:text-burgundy">
+  <!-- ==================== MOBILE-FIRST SHELL (MAX-WIDTH 480PX) ==================== -->
+  <div class="relative w-full max-w-[480px] min-h-screen burgundy-canvas border-x border-cream/10 shadow-[0_0_60px_rgba(0,0,0,0.65)] flex flex-col overflow-x-hidden">
+    <!-- ==================== HEADER ==================== -->
+    <header class="sticky top-0 z-30 bg-burgundy/95 border-b border-cream/15 px-4 py-3 flex items-center justify-between gap-3">
+      <div class="flex items-center gap-3 min-w-0">
+        <div
+          class="w-10 h-10 rounded-full burgundy-wax-seal border border-champagne/40 flex items-center justify-center font-headline text-xs tracking-wider text-cream shrink-0"
+          aria-hidden="true"
+        >
+          KN
+        </div>
+        <div class="min-w-0">
+          <p class="text-[9.5px] font-medium uppercase tracking-[0.22em] text-champagne truncate">
+            Komalasari &amp; Najmudin
+          </p>
+          <h1 class="font-headline text-lg sm:text-xl text-cream leading-tight truncate">
+            Generator Link Undangan
+          </h1>
+        </div>
+      </div>
+
+      <a
+        href="index.html"
+        class="min-h-[44px] px-3.5 py-2 rounded-full bg-cream hover:bg-cream-warm text-burgundy text-[10.5px] font-semibold uppercase tracking-[0.12em] inline-flex items-center gap-1.5 shrink-0 transition-colors"
+      >
+        <span>Lihat Undangan</span>
+        <span aria-hidden="true">&rsaquo;</span>
+      </a>
+    </header>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main class="flex-1 px-5 pt-6 pb-20 space-y-8">
+      <!-- ==================== VINTAGE TICKET GENERATOR CARD ==================== -->
+      <section aria-label="Formulir Daftar Tamu">
+        <form
+          id="generator-form"
+          class="relative w-full cream-canvas text-burgundy cream-surface px-5 pt-7 pb-6 shadow-[0_20px_50px_rgba(0,0,0,0.45)] overflow-hidden"
+          novalidate
+        >
+          <!-- 4 Concave Scooped Ticket Corners -->
+          <span class="pointer-events-none absolute -top-3.5 -left-3.5 w-7 h-7 rounded-full bg-burgundy" aria-hidden="true"></span>
+          <span class="pointer-events-none absolute -top-3.5 -right-3.5 w-7 h-7 rounded-full bg-burgundy" aria-hidden="true"></span>
+          <span class="pointer-events-none absolute -bottom-3.5 -left-3.5 w-7 h-7 rounded-full bg-burgundy" aria-hidden="true"></span>
+          <span class="pointer-events-none absolute -bottom-3.5 -right-3.5 w-7 h-7 rounded-full bg-burgundy" aria-hidden="true"></span>
+
+          <!-- Ticket Top Heading -->
+          <div class="text-center">
+            <p class="text-[8.5px] uppercase tracking-[0.28em] text-burgundy-soft font-medium">
+              The Wedding of
+            </p>
+            <h2 class="font-headline text-[26px] leading-none uppercase tracking-[0.06em] text-burgundy mt-1">
+              KIRIM UNDANGAN
+            </h2>
+            <p class="font-script text-[28px] leading-none text-burgundy-soft -mt-0.5">
+              Komalasari &amp; Najmudin
+            </p>
+            <p class="mt-2 text-xs text-burgundy-soft leading-relaxed">
+              Ketik atau tempel daftar nama tamu (1 nama per baris), lalu ketuk <strong>Buat Daftar Link</strong>.
+            </p>
+          </div>
+
+          <!-- Dashed Perforation with Side Notches -->
+          <div class="relative my-5 flex items-center" aria-hidden="true">
+            <span class="absolute -left-8 w-6 h-6 rounded-full bg-burgundy"></span>
+            <div class="w-full border-t border-dashed border-burgundy/40"></div>
+            <span class="absolute -right-8 w-6 h-6 rounded-full bg-burgundy"></span>
+          </div>
+
+          <!-- Guest Names Input Area -->
+          <div class="space-y-3">
+            <div class="flex items-center justify-between gap-2">
+              <label for="guest-list-input" class="block text-xs font-semibold uppercase tracking-[0.12em] text-burgundy">
+                Daftar Nama Tamu
+              </label>
+              <span
+                id="guest-line-count"
+                class="px-2.5 py-0.5 rounded-full bg-burgundy text-cream text-[11px] font-medium shrink-0"
+              >
+                0 Nama
+              </span>
+            </div>
+
+            <textarea
+              id="guest-list-input"
+              rows="6"
+              placeholder="Pak Afar&#10;19. Reza&#10;Bpk. Hendra &amp; Keluarga"
+              class="w-full px-3.5 py-3 rounded-xl bg-white border border-burgundy/30 text-sm text-burgundy placeholder:text-[#68504A] leading-relaxed resize-y"
+            ></textarea>
+
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <button
+                id="btn-fill-sample"
+                type="button"
+                class="min-h-[44px] px-3.5 py-2 rounded-full bg-white hover:bg-cream-warm border border-burgundy/30 text-xs font-medium text-burgundy inline-flex items-center gap-1.5 transition-colors"
+              >
+                <span>Isi Contoh Nama</span>
+              </button>
+
+              <button
+                id="btn-clear-guests"
+                type="button"
+                class="min-h-[44px] px-3.5 py-2 rounded-full bg-white hover:bg-[#FDF2F2] border border-[#991B1B]/35 text-xs font-medium text-[#991B1B] inline-flex items-center gap-1.5 transition-colors"
+              >
+                <span>Kosongkan Daftar</span>
+              </button>
+            </div>
+
+            <p id="autosave-indicator" class="text-[11px] font-medium text-burgundy-soft flex items-center gap-1.5 pt-1">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" />
+                <path d="M8.5 12.2L10.8 14.5L15.8 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span>Draf tersimpan otomatis di browser perangkat ini</span>
+            </p>
+          </div>
+
+          <!-- Form Status / Validation Alert -->
+          <div
+            id="generator-status"
+            role="status"
+            aria-live="polite"
+            class="hidden mt-4 rounded-xl px-4 py-3 text-xs font-medium"
+          ></div>
+
+          <!-- Submit Button -->
+          <div class="mt-5">
+            <button
+              id="btn-generate-links"
+              type="submit"
+              class="w-full min-h-[48px] px-6 py-3 rounded-full bg-burgundy hover:bg-burgundy-deep text-cream text-xs font-medium uppercase tracking-[0.18em] shadow-lg inline-flex items-center justify-center gap-2 active:scale-[0.99] transition-all"
+            >
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M10 13A5 5 0 0 0 17.54 14.54L20.54 11.54A5 5 0 0 0 13.47 4.47L11.75 6.18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M14 11A5 5 0 0 0 6.46 9.46L3.46 12.46A5 5 0 0 0 10.53 19.53L12.24 17.82" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span>Buat Daftar Link</span>
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- ==================== DAFTAR KARTU HASIL PER TAMU ==================== -->
+      <section id="results-section" aria-label="Daftar Link Undangan Tamu" class="space-y-4">
+        <div class="flex items-end justify-between gap-2">
+          <div>
+            <p class="font-script text-[30px] leading-none text-champagne">
+              Daftar Tamu
+            </p>
+            <h2 class="font-headline text-2xl text-cream mt-0.5">
+              Kartu Link Undangan
+            </h2>
+          </div>
+          <span
+            id="total-cards-badge"
+            class="px-3 py-1 rounded-full bg-cream text-burgundy text-xs font-semibold shrink-0"
+          >
+            0 Tamu
+          </span>
+        </div>
+
+        <!-- Search Filter -->
+        <div>
+          <label for="search-guest-input" class="block text-xs font-medium text-cream-warm mb-1.5">
+            Cari Nama Tamu di Daftar
+          </label>
+          <input
+            id="search-guest-input"
+            type="search"
+            placeholder="Ketik nama tamu untuk menyaring..."
+            class="w-full min-h-[46px] px-3.5 py-2.5 rounded-xl bg-burgundy-deep/75 border border-cream/25 text-xs text-cream placeholder:text-cream-warm"
+          />
+        </div>
+
+        <!-- Empty State -->
+        <div
+          id="cards-empty-state"
+          class="hidden rounded-2xl bg-burgundy-deep/65 border border-cream/25 p-6 text-center space-y-2"
+        >
+          <p id="cards-empty-title" class="font-headline text-xl text-cream">
+            Belum Ada Daftar Tamu
+          </p>
+          <p id="cards-empty-desc" class="text-xs text-cream-warm leading-relaxed max-w-xs mx-auto">
+            Ketik atau tempel nama tamu pada kotak di atas (1 nama per baris), lalu ketuk tombol Buat Daftar Link.
+          </p>
+        </div>
+
+        <!-- Cards Container -->
+        <div id="generated-cards-list" class="space-y-4"></div>
+      </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="px-5 py-7 border-t border-cream/15 text-center">
+      <p class="font-script text-[30px] text-cream leading-tight">
+        Komalasari &amp; Najmudin
+      </p>
+      <p class="mt-1 text-[10px] uppercase tracking-[0.2em] text-champagne">
+        Generator Undangan Digital | 06 Desember 2026
+      </p>
+    </footer>
+  </div>
+
+  <!-- ==================== TOAST NOTIFICATION ==================== -->
+  <div
+    id="toast-notification"
+    role="status"
+    aria-live="polite"
+    class="fixed bottom-6 left-1/2 -translate-x-1/2 translate-y-4 opacity-0 pointer-events-none z-50 w-[calc(100%-2.5rem)] max-w-[380px] rounded-full bg-cream text-burgundy border border-gold px-5 py-3 text-xs font-semibold shadow-2xl flex items-center gap-2.5"
+  >
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="text-burgundy shrink-0" aria-hidden="true">
+      <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" />
+      <path d="M8.5 12.2L10.8 14.5L15.8 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <span id="toast-message">Berhasil disalin</span>
+  </div>
+
+  <!-- ==================== APPLICATION SCRIPT ==================== -->
+  <script>
+    (function () {
+      "use strict";
+
+      const STORAGE_KEYS = {
+        GUESTS: "undangan_kn_kirim_guests_v1",
+        SENT_MAP: "undangan_kn_kirim_sent_v1",
+      };
+
+      const SAMPLE_GUESTS = [
+        "Pak Afar",
+        "19. Reza",
+        "Bpk. Hendra & Keluarga",
+      ].join("\n");
+
+      const DEFAULT_WA_TEMPLATE = [
+        "Kepada Yth.",
+        "Bapak/Ibu/Saudara/i *[NAMA_TAMU]*",
+        "",
+        "Assalamu'alaikum Warahmatullahi Wabarakatuh.",
+        "",
+        "Dengan memohon rahmat dan ridho Allah SWT, tanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri acara pernikahan kami:",
+        "",
+        "*Komalasari & Najmudin*",
+        "",
+        "Hari, Tanggal: Minggu, 06 Desember 2026",
+        "Lokasi: Kp. Cirungki RT 02 RW 04, Desa Hegarmanah, Kec. Cikancung, Kab. Bandung",
+        "",
+        "Informasi lengkap mengenai detail acara, lokasi, dan konfirmasi kehadiran dapat diakses melalui tautan undangan digital berikut:",
+        "[LINK_UNDANGAN]",
+        "",
+        "Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.",
+        "",
+        "Wassalamu'alaikum Warahmatullahi Wabarakatuh.",
+        "Kami yang berbahagia,",
+        "*Komalasari & Najmudin*",
+      ].join("\n");
+
+      // DOM Elements
+      const generatorForm = document.getElementById("generator-form");
+      const guestListInput = document.getElementById("guest-list-input");
+      const guestLineCount = document.getElementById("guest-line-count");
+      const btnFillSample = document.getElementById("btn-fill-sample");
+      const btnClearGuests = document.getElementById("btn-clear-guests");
+
+      const autosaveIndicator = document.getElementById("autosave-indicator");
+      const generatorStatus = document.getElementById("generator-status");
+      const totalCardsBadge = document.getElementById("total-cards-badge");
+      const searchGuestInput = document.getElementById("search-guest-input");
+      const cardsEmptyState = document.getElementById("cards-empty-state");
+      const cardsEmptyTitle = document.getElementById("cards-empty-title");
+      const cardsEmptyDesc = document.getElementById("cards-empty-desc");
+      const generatedCardsList = document.getElementById("generated-cards-list");
+
+      const toastEl = document.getElementById("toast-notification");
+      const toastMsgEl = document.getElementById("toast-message");
+      let toastTimer = null;
+
+      // ==================== 1. BASE URL & MESSAGE BUILDER ====================
+      function detectBaseUrl() {
+        try {
+          const loc = window.location;
+          if (!loc || !loc.href) {
+            return "http://127.0.0.1:4173/";
+          }
+          const cleanUrl = loc.href.split("?")[0].split("#")[0];
+          if (/\/kirim\.html$/i.test(cleanUrl)) {
+            return cleanUrl.replace(/\/kirim\.html$/i, "/");
+          }
+          if (cleanUrl.endsWith("/")) {
+            return cleanUrl;
+          }
+          return cleanUrl.replace(/\/[^/]*$/, "/");
+        } catch (err) {
+          return "http://127.0.0.1:4173/";
+        }
+      }
+
+      function buildInvitationUrl(guestName) {
+        const baseUrl = detectBaseUrl();
+        const separator = baseUrl.indexOf("?") !== -1 ? "&" : "?";
+        return baseUrl + separator + "to=" + encodeURIComponent(guestName);
+      }
+
+      function buildPersonalizedMessage(guestName, inviteUrl) {
+        return DEFAULT_WA_TEMPLATE
+          .replace(/\[NAMA_TAMU\]/g, guestName)
+          .replace(/\[LINK_UNDANGAN\]/g, inviteUrl);
+      }
+
+      // ==================== 2. LOCALSTORAGE PERSISTENCE ====================
+      function safeGetStorage(key) {
+        try {
+          return window.localStorage.getItem(key);
+        } catch (err) {
+          return null;
+        }
+      }
+
+      function safeSetStorage(key, value) {
+        try {
+          window.localStorage.setItem(key, value);
+        } catch (err) {
+          // Ignore storage errors in private browsing mode
+        }
+      }
+
+      function getSentStatusMap() {
+        try {
+          const raw = safeGetStorage(STORAGE_KEYS.SENT_MAP);
+          return raw ? JSON.parse(raw) || {} : {};
+        } catch (err) {
+          return {};
+        }
+      }
+
+      function setGuestSentStatus(guestName, isSent) {
+        const map = getSentStatusMap();
+        if (isSent) {
+          map[guestName] = true;
+        } else {
+          delete map[guestName];
+        }
+        safeSetStorage(STORAGE_KEYS.SENT_MAP, JSON.stringify(map));
+      }
+
+      function parseGuestLines(rawText) {
+        return String(rawText || "")
+          .split(/\r?\n/)
+          .map(function (line) {
+            return line.trim();
+          })
+          .filter(function (line) {
+            return line.length > 0;
+          });
+      }
+
+      function updateLineCounter() {
+        const guests = parseGuestLines(guestListInput.value);
+        guestLineCount.textContent = guests.length + " Nama";
+      }
+
+      function saveDraftToLocalStorage() {
+        safeSetStorage(STORAGE_KEYS.GUESTS, guestListInput.value);
+        updateLineCounter();
+
+        if (autosaveIndicator) {
+          const nowStr = new Intl.DateTimeFormat("id-ID", {
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+          }).format(new Date());
+          const span = autosaveIndicator.querySelector("span");
+          if (span) {
+            span.textContent = "Draf tersimpan otomatis (" + nowStr + ")";
+          }
+        }
+      }
+
+      function loadDraftFromLocalStorage() {
+        const savedGuests = safeGetStorage(STORAGE_KEYS.GUESTS);
+        guestListInput.value = savedGuests !== null ? savedGuests : SAMPLE_GUESTS;
+        updateLineCounter();
+      }
+
+      // ==================== 3. TOAST & STATUS HELPERS ====================
+      function showToast(message) {
+        toastMsgEl.textContent = message;
+        toastEl.classList.remove("opacity-0", "translate-y-4", "pointer-events-none");
+        toastEl.classList.add("opacity-100", "translate-y-0");
+
+        if (toastTimer) {
+          window.clearTimeout(toastTimer);
+        }
+        toastTimer = window.setTimeout(function () {
+          toastEl.classList.add("opacity-0", "translate-y-4", "pointer-events-none");
+          toastEl.classList.remove("opacity-100", "translate-y-0");
+        }, 2600);
+      }
+
+      function showStatusBanner(type, message) {
+        if (!message) {
+          generatorStatus.classList.add("hidden");
+          return;
+        }
+        generatorStatus.textContent = message;
+        generatorStatus.classList.remove(
+          "hidden",
+          "bg-[#FDF2F2]",
+          "text-[#991B1B]",
+          "border",
+          "border-[#B91C1C]/30",
+          "bg-[#F1F6F1]",
+          "text-[#1E5631]",
+          "border-[#1E5631]/30"
+        );
+        if (type === "error") {
+          generatorStatus.classList.add("bg-[#FDF2F2]", "text-[#991B1B]", "border", "border-[#B91C1C]/30");
+        } else {
+          generatorStatus.classList.add("bg-[#F1F6F1]", "text-[#1E5631]", "border", "border-[#1E5631]/30");
+        }
+      }
+
+      async function copyTextToClipboard(text) {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(text);
+          return true;
+        }
+        const tempArea = document.createElement("textarea");
+        tempArea.value = text;
+        tempArea.setAttribute("readonly", "");
+        tempArea.style.position = "fixed";
+        tempArea.style.left = "-9999px";
+        document.body.appendChild(tempArea);
+        tempArea.select();
+        const ok = document.execCommand("copy");
+        document.body.removeChild(tempArea);
+        if (!ok) {
+          throw new Error("Copy failed");
+        }
+        return true;
+      }
+
+      // ==================== 4. RENDER GENERATED GUEST TICKET CARDS ====================
+      function renderGuestCards() {
+        const allGuests = parseGuestLines(guestListInput.value);
+        const filterQuery = (searchGuestInput.value || "").trim().toLowerCase();
+        const sentMap = getSentStatusMap();
+
+        totalCardsBadge.textContent = allGuests.length + " Tamu";
+        generatedCardsList.innerHTML = "";
+
+        if (allGuests.length === 0) {
+          cardsEmptyState.classList.remove("hidden");
+          cardsEmptyTitle.textContent = "Belum Ada Daftar Tamu";
+          cardsEmptyDesc.textContent =
+            "Ketik atau tempel nama tamu pada kotak di atas (1 nama per baris), lalu ketuk tombol Buat Daftar Link.";
+          return;
+        }
+
+        const filteredGuests = allGuests.filter(function (name) {
+          return !filterQuery || name.toLowerCase().indexOf(filterQuery) !== -1;
+        });
+
+        if (filteredGuests.length === 0) {
+          cardsEmptyState.classList.remove("hidden");
+          cardsEmptyTitle.textContent = "Nama Tamu Tidak Ditemukan";
+          cardsEmptyDesc.textContent =
+            "Tidak ada tamu yang cocok dengan kata kunci pencarian Anda.";
+          return;
+        }
+
+        cardsEmptyState.classList.add("hidden");
+
+        filteredGuests.forEach(function (guestName, idx) {
+          const inviteUrl = buildInvitationUrl(guestName);
+          const fullWaMessage = buildPersonalizedMessage(guestName, inviteUrl);
+          const waSendUrl = "https://api.whatsapp.com/send?text=" + encodeURIComponent(fullWaMessage);
+          const isSent = Boolean(sentMap[guestName]);
+
+          const card = document.createElement("article");
+          card.className = "relative cream-canvas text-burgundy cream-surface px-5 py-5 shadow-xl overflow-hidden";
+
+          // Vintage ticket corner cutouts
+          ["-top-2.5 -left-2.5", "-top-2.5 -right-2.5", "-bottom-2.5 -left-2.5", "-bottom-2.5 -right-2.5"].forEach(function (pos) {
+            const scoop = document.createElement("span");
+            scoop.className = "pointer-events-none absolute " + pos + " w-5 h-5 rounded-full bg-burgundy";
+            scoop.setAttribute("aria-hidden", "true");
+            card.appendChild(scoop);
+          });
+
+          // Card Header: Number + Guest Name + Sent Status Toggle
+          const headerRow = document.createElement("div");
+          headerRow.className = "flex items-start justify-between gap-2.5";
+
+          const titleWrap = document.createElement("div");
+          titleWrap.className = "flex items-baseline gap-2 min-w-0";
+
+          const numBadge = document.createElement("span");
+          numBadge.className = "font-headline italic text-base font-semibold text-burgundy-soft shrink-0";
+          numBadge.textContent = String(idx + 1).padStart(2, "0") + ".";
+
+          const nameHeading = document.createElement("h3");
+          nameHeading.className = "font-headline text-2xl font-medium text-burgundy break-words leading-snug";
+          nameHeading.textContent = guestName;
+
+          titleWrap.appendChild(numBadge);
+          titleWrap.appendChild(nameHeading);
+
+          const sentBtn = document.createElement("button");
+          sentBtn.type = "button";
+          sentBtn.className = isSent
+            ? "min-h-[44px] px-3 py-1.5 rounded-full bg-[#F1F6F1] border border-[#1E5631]/40 text-[11px] font-semibold text-[#1E5631] shrink-0"
+            : "min-h-[44px] px-3 py-1.5 rounded-full bg-white border border-burgundy/30 text-[11px] font-medium text-burgundy-soft shrink-0";
+          sentBtn.textContent = isSent ? "Sudah Dikirim" : "Belum Dikirim";
+          sentBtn.addEventListener("click", function () {
+            const nextState = !Boolean(getSentStatusMap()[guestName]);
+            setGuestSentStatus(guestName, nextState);
+            renderGuestCards();
+          });
+
+          headerRow.appendChild(titleWrap);
+          headerRow.appendChild(sentBtn);
+
+          // Automatic URL Preview Box
+          const urlBox = document.createElement("div");
+          urlBox.className = "mt-3 rounded-xl bg-white border border-burgundy/25 px-3.5 py-2.5";
+
+          const urlLabel = document.createElement("p");
+          urlLabel.className = "text-[9.5px] font-semibold uppercase tracking-[0.16em] text-burgundy-soft mb-0.5";
+          urlLabel.textContent = "Preview Link Undangan:";
+
+          const urlLink = document.createElement("a");
+          urlLink.href = inviteUrl;
+          urlLink.target = "_blank";
+          urlLink.rel = "noopener noreferrer";
+          urlLink.className = "block text-xs text-burgundy hover:underline break-all";
+          urlLink.textContent = inviteUrl;
+
+          urlBox.appendChild(urlLabel);
+          urlBox.appendChild(urlLink);
+
+          // Collapsible Message Preview
+          const detailsEl = document.createElement("details");
+          detailsEl.className = "mt-2.5 rounded-xl bg-white/75 border border-burgundy/20 px-3.5 py-2 text-xs text-burgundy-soft";
+
+          const summaryEl = document.createElement("summary");
+          summaryEl.className = "font-medium text-burgundy select-none py-1";
+          summaryEl.textContent = "Lihat Preview Pesan Pengantar";
+
+          const previewPre = document.createElement("pre");
+          previewPre.className = "mt-2 pt-2 border-t border-burgundy/15 whitespace-pre-wrap font-sans text-xs text-burgundy-soft leading-relaxed";
+          previewPre.textContent = fullWaMessage;
+
+          detailsEl.appendChild(summaryEl);
+          detailsEl.appendChild(previewPre);
+
+          // Perforated Tear-Off Divider
+          const divider = document.createElement("div");
+          divider.className = "relative my-4 flex items-center";
+          divider.setAttribute("aria-hidden", "true");
+          divider.innerHTML =
+            '<span class="absolute -left-7 w-5 h-5 rounded-full bg-burgundy"></span>' +
+            '<div class="w-full border-t border-dashed border-burgundy/35"></div>' +
+            '<span class="absolute -right-7 w-5 h-5 rounded-full bg-burgundy"></span>';
+
+          // 3 Mandatory Action Buttons: Kirim WA, Salin Teks, Salin Link
+          const actionsGrid = document.createElement("div");
+          actionsGrid.className = "grid grid-cols-1 sm:grid-cols-3 gap-2.5";
+
+          // 1. Tombol Kirim WA (WhatsApp Green)
+          const btnWa = document.createElement("a");
+          btnWa.href = waSendUrl;
+          btnWa.target = "_blank";
+          btnWa.rel = "noopener noreferrer";
+          btnWa.className =
+            "btn-kirim-wa min-h-[44px] px-4 py-2.5 rounded-full bg-wa hover:bg-wa-hover text-white text-xs font-medium inline-flex items-center justify-center gap-2 shadow-sm transition-colors";
+          btnWa.innerHTML =
+            '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12.06 21.8c-1.8 0-3.56-.48-5.1-1.4l-.37-.21-3.75.98 1-3.66-.24-.38a9.86 9.86 0 0 1-1.51-5.23c0-5.45 4.44-9.89 9.9-9.89 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.9 6.99c0 5.46-4.44 9.9-9.82 9.9Zm5.43-7.41c-.3-.15-1.76-.87-2.03-.97-.28-.1-.48-.15-.68.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.48-1.77-1.66-2.07-.17-.3-.02-.46.13-.6.14-.14.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.68-1.63-.93-2.23-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z" fill="currentColor"/></svg><span>Kirim WA</span>';
+          btnWa.addEventListener("click", function () {
+            setGuestSentStatus(guestName, true);
+            renderGuestCards();
+          });
+
+          // 2. Tombol Salin Teks (Full Message + Link)
+          const btnCopyText = document.createElement("button");
+          btnCopyText.type = "button";
+          btnCopyText.className =
+            "btn-salin-teks min-h-[44px] px-4 py-2.5 rounded-full bg-burgundy hover:bg-burgundy-deep text-cream text-xs font-medium inline-flex items-center justify-center gap-1.5 transition-colors";
+          btnCopyText.innerHTML =
+            '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M5 15H4C2.895 15 2 14.105 2 13V4C2 2.895 2.895 2 4 2H13C14.105 2 15 2.895 15 4V5" stroke="currentColor" stroke-width="1.7"/></svg><span>Salin Teks</span>';
+          btnCopyText.addEventListener("click", async function () {
+            try {
+              await copyTextToClipboard(fullWaMessage);
+              showToast("Berhasil disalin (Teks pengantar untuk " + guestName + ")");
+            } catch (err) {
+              showToast("Gagal menyalin teks secara otomatis.");
+            }
+          });
+
+          // 3. Tombol Salin Link (Only URL)
+          const btnCopyLink = document.createElement("button");
+          btnCopyLink.type = "button";
+          btnCopyLink.className =
+            "btn-salin-link min-h-[44px] px-4 py-2.5 rounded-full bg-white hover:bg-cream-warm text-burgundy border border-burgundy/40 text-xs font-medium inline-flex items-center justify-center gap-1.5 transition-colors";
+          btnCopyLink.innerHTML =
+            '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M10 13A5 5 0 0 0 17.54 14.54L20.54 11.54A5 5 0 0 0 13.47 4.47L11.75 6.18" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 11A5 5 0 0 0 6.46 9.46L3.46 12.46A5 5 0 0 0 10.53 19.53L12.24 17.82" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Salin Link</span>';
+          btnCopyLink.addEventListener("click", async function () {
+            try {
+              await copyTextToClipboard(inviteUrl);
+              showToast("Berhasil disalin (Link undangan " + guestName + ")");
+            } catch (err) {
+              showToast("Gagal menyalin link secara otomatis.");
+            }
+          });
+
+          actionsGrid.appendChild(btnWa);
+          actionsGrid.appendChild(btnCopyText);
+          actionsGrid.appendChild(btnCopyLink);
+
+          card.appendChild(headerRow);
+          card.appendChild(urlBox);
+          card.appendChild(detailsEl);
+          card.appendChild(divider);
+          card.appendChild(actionsGrid);
+
+          generatedCardsList.appendChild(card);
+        });
+      }
+
+      // ==================== 5. EVENT LISTENERS ====================
+      guestListInput.addEventListener("input", function () {
+        saveDraftToLocalStorage();
+      });
+
+      searchGuestInput.addEventListener("input", function () {
+        renderGuestCards();
+      });
+
+      btnFillSample.addEventListener("click", function () {
+        guestListInput.value = SAMPLE_GUESTS;
+        saveDraftToLocalStorage();
+        renderGuestCards();
+        showStatusBanner("success", "Contoh daftar tamu berhasil dimuat.");
+      });
+
+      btnClearGuests.addEventListener("click", function () {
+        guestListInput.value = "";
+        saveDraftToLocalStorage();
+        renderGuestCards();
+        showStatusBanner("success", "Daftar nama tamu telah dikosongkan.");
+      });
+
+      generatorForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        saveDraftToLocalStorage();
+        const guests = parseGuestLines(guestListInput.value);
+
+        if (guests.length === 0) {
+          showStatusBanner("error", "Mohon ketik atau tempel minimal 1 nama tamu terlebih dahulu.");
+          renderGuestCards();
+          guestListInput.focus();
+          return;
+        }
+
+        renderGuestCards();
+        showStatusBanner("success", "Berhasil membuat " + guests.length + " kartu link undangan tamu.");
+        showToast("Berhasil membuat " + guests.length + " link tamu");
+      });
+
+      // ==================== INITIALIZATION ====================
+      loadDraftFromLocalStorage();
+      renderGuestCards();
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<meta content="mobile_blank" name="shell-type"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400&amp;family=Manrope:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "inverse-on-surface": "#f5f0eb",
+            "surface-container-highest": "#e6e2dd",
+            "outline": "#867274",
+            "primary-fixed": "#ffd9dc",
+            "secondary-fixed": "#ffdea5",
+            "on-background": "#1d1b19",
+            "error": "#ba1a1a",
+            "surface-tint": "#934652",
+            "background": "#fef8f3",
+            "secondary-fixed-dim": "#e9c176",
+            "surface-container-low": "#f8f3ee",
+            "secondary-container": "#fed488",
+            "surface-dim": "#ded9d4",
+            "surface-variant": "#e6e2dd",
+            "inverse-surface": "#32302d",
+            "on-surface": "#1d1b19",
+            "primary-fixed-dim": "#ffb2bb",
+            "inverse-primary": "#ffb2bb",
+            "tertiary-fixed": "#ffd9dd",
+            "on-tertiary-container": "#ce818d",
+            "on-primary": "#ffffff",
+            "secondary": "#775a19",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "on-surface-variant": "#534344",
+            "surface": "#fef8f3",
+            "on-error": "#ffffff",
+            "on-secondary-fixed": "#261900",
+            "tertiary-fixed-dim": "#ffb2bd",
+            "primary": "#3c0311",
+            "on-primary-fixed-variant": "#762f3b",
+            "surface-container": "#f2ede8",
+            "outline-variant": "#d9c1c2",
+            "on-secondary-fixed-variant": "#5d4201",
+            "on-secondary": "#ffffff",
+            "on-primary-fixed": "#3d0412",
+            "on-secondary-container": "#785a1a",
+            "on-error-container": "#93000a",
+            "error-container": "#ffdad6",
+            "primary-container": "#581825",
+            "on-primary-container": "#d77d89",
+            "on-tertiary-fixed": "#3a0815",
+            "surface-container-high": "#ece7e2",
+            "tertiary": "#380714",
+            "on-tertiary-fixed-variant": "#71333f",
+            "tertiary-container": "#531c28",
+            "surface-bright": "#fef8f3"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-md": "1rem",
+            "space-xl": "3rem",
+            "gutter-desktop": "2rem",
+            "margin-desktop": "3rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1.75rem",
+            "space-sm": "0.5rem",
+            "gutter": "1rem",
+            "margin": "1.25rem"
+          },
+          "fontFamily": {
+            "label-md": ["Manrope", "sans-serif"],
+            "body-md": ["Manrope", "sans-serif"],
+            "body-lg": ["Manrope", "sans-serif"],
+            "headline-lg": ["Bodoni Moda", "serif"],
+            "headline-lg-mobile": ["Bodoni Moda", "serif"],
+            "headline-sm": ["Bodoni Moda", "serif"],
+            "display-lg": ["Bodoni Moda", "serif"],
+            "display-lg-mobile": ["Bodoni Moda", "serif"],
+            "headline-md": ["Bodoni Moda", "serif"],
+            "body-sm": ["Manrope", "sans-serif"],
+            "label-caps": ["Bodoni Moda", "serif"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    @layer base {
+      html, body {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        overscroll-behavior: none;
+        background-color: #f7f1eb;
+        color: #1d1b19;
+        font-family: 'Manrope', sans-serif;
+      }
+      .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); }
+      .pt-safe { padding-top: env(safe-area-inset-top, 0px); }
+    }
+    ::-webkit-scrollbar { display: none; }
+    
+    /* Luxury Gold Wax Seal 3D styling */
+    .wax-seal {
+      width: 78px;
+      height: 78px;
+      background: radial-gradient(circle at 35% 30%, #f6df95 0%, #d8a846 42%, #ab7c23 75%, #6a4909 100%);
+      border-radius: 50%;
+      box-shadow: 
+        0 8px 20px rgba(56, 7, 20, 0.45),
+        0 3px 6px rgba(0,0,0,0.35),
+        inset 0 2px 4px rgba(255,255,255,0.7),
+        inset 0 -3px 6px rgba(0,0,0,0.5);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .wax-seal::before {
+      content: "";
+      position: absolute;
+      inset: -5px;
+      border-radius: 46% 54% 52% 48% / 51% 47% 53% 49%;
+      background: radial-gradient(circle at 35% 30%, #e2b95b 0%, #b88528 65%, #764f0b 100%);
+      z-index: -1;
+      filter: blur(0.4px);
+      box-shadow: 0 4px 10px rgba(45, 5, 15, 0.35);
+    }
+    .wax-inner-ring {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(255, 235, 175, 0.65);
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.4), 0 1px 2px rgba(255,255,255,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at 40% 35%, #ca9b3b 0%, #996c1c 85%);
+    }
+    .wax-monogram {
+      font-family: 'Bodoni Moda', serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: #553909;
+      text-shadow: 1px 1px 1px rgba(255,245,210,0.7), -1px -1px 1px rgba(50,25,2,0.8);
+      transform: translateY(-0.5px);
+    }
+
+    /* Paper & Translucent Vellum overlay */
+    .vellum-sash {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.55) 0%, rgba(250, 243, 235, 0.3) 100%);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border-right: 1px solid rgba(255, 255, 255, 0.45);
+      box-shadow: 4px 0 18px rgba(75, 20, 30, 0.08);
+    }
+    .deep-burgundy-flap {
+      background: linear-gradient(145deg, #440c17 0%, #2f040d 60%, #1e0208 100%);
+      box-shadow: 6px 4px 22px rgba(35, 3, 10, 0.4);
+    }
+    .paper-texture {
+      background-color: #faf5ee;
+      background-image: 
+        radial-gradient(at 90% 10%, rgba(184, 133, 40, 0.06) 0px, transparent 50%),
+        radial-gradient(at 10% 90%, rgba(88, 24, 37, 0.04) 0px, transparent 50%);
+    }
+  </style>
+</head>
+<body class="bg-[#f3ede7] text-on-surface flex flex-col min-h-screen pt-safe pb-safe selection:bg-primary-container selection:text-white">
+<main class="flex flex-col relative w-full max-w-md mx-auto min-h-screen bg-surface shadow-2xl overflow-hidden">
+<!-- Ambient Audio Element & Controller -->
+<audio id="invitation-audio" loop="" preload="none">
+<source src="https://assets.mixkit.co/music/preview/mixkit-romantic-wedding-harp-and-strings-1002.mp3" type="audio/mpeg"/>
+</audio>
+<aside class="fixed bottom-6 right-6 z-50 pointer-events-auto">
+<button aria-label="Nyalakan atau hentikan musik latar" class="flex items-center justify-center w-11 h-11 rounded-full bg-[#fcf8f4]/90 backdrop-blur-md shadow-lg border border-[#e2d5c7] text-primary transition-transform duration-300 active:scale-95" id="audio-toggle-btn">
+<span class="material-symbols-outlined text-[20px]" id="audio-icon">music_note</span>
+</button>
+</aside>
+<!-- MAIN LUXURY EDITORIAL COVER (Vellum, Wine Flap & Wax Seal) -->
+<section class="relative w-full min-h-screen flex flex-col justify-between paper-texture overflow-hidden p-6 sm:p-7" id="cover-section">
+<!-- Watermark Giant Typography in Background (Reference Image Style: 12 / 26) -->
+<div class="absolute right-1 top-12 pointer-events-none select-none z-0 opacity-[0.09] text-right font-['Bodoni_Moda'] leading-none">
+<span class="block text-[8.5rem] font-extralight text-primary">12</span>
+<span class="block text-[8.5rem] font-extralight text-primary -mt-8">26</span>
+</div>
+<!-- Deep Burgundy Wine Diagonal Origami Flap on Left Side -->
+<div class="deep-burgundy-flap absolute -top-12 -left-20 w-52 sm:w-60 h-[115%] rotate-[9deg] pointer-events-none z-10 origin-top-left border-r border-[#692331]/40">
+<!-- Subtle inner metallic foil line inside flap -->
+<div class="absolute right-4 top-0 bottom-0 w-[1px] bg-gradient-to-b from-transparent via-[#d8a846]/35 to-transparent"></div>
+</div>
+<!-- Delicate Vellum / Silk Sash angled across flap edge -->
+<div class="vellum-sash absolute -top-10 left-12 sm:left-16 w-16 h-[118%] rotate-[13deg] pointer-events-none z-20 origin-top"></div>
+<!-- Dried Floral / Baby's Breath Botanical Accents (Clean SVG, No Photos) -->
+<svg class="absolute -left-2 top-20 w-32 h-64 pointer-events-none z-20 text-[#edd2b8]/80 drop-shadow-sm opacity-90" fill="none" stroke="currentColor" viewbox="0 0 120 240">
+<!-- Main stems -->
+<path d="M15 235 C35 180, 50 120, 65 30" stroke="#c9a888" stroke-linecap="round" stroke-width="1.2"></path>
+<path d="M38 165 C55 140, 75 125, 95 110" stroke="#c9a888" stroke-linecap="round" stroke-width="0.9"></path>
+<path d="M48 115 C60 90, 80 75, 100 65" stroke="#c9a888" stroke-linecap="round" stroke-width="0.9"></path>
+<path d="M58 60 C72 45, 88 38, 105 32" stroke="#c9a888" stroke-linecap="round" stroke-width="0.8"></path>
+<!-- Baby's breath florets / buds -->
+<circle cx="65" cy="28" fill="#fffaf5" r="3.2" stroke="#be9c77" stroke-width="0.8"></circle>
+<circle cx="72" cy="24" fill="#fffaf5" r="2.2" stroke="#be9c77" stroke-width="0.8"></circle>
+<circle cx="95" cy="110" fill="#fffaf5" r="3" stroke="#be9c77" stroke-width="0.8"></circle>
+<circle cx="102" cy="106" fill="#fffaf5" r="2.2" stroke="#be9c77" stroke-width="0.8"></circle>
+<circle cx="100" cy="65" fill="#fffaf5" r="3.2" stroke="#be9c77" stroke-width="0.8"></circle>
+<circle cx="106" cy="60" fill="#fffaf5" r="2" stroke="#be9c77" stroke-width="0.8"></circle>
+<circle cx="105" cy="32" fill="#fffaf5" r="3" stroke="#be9c77" stroke-width="0.8"></circle>
+<circle cx="85" cy="80" fill="#fffaf5" r="2.5" stroke="#be9c77" stroke-width="0.8"></circle>
+<circle cx="78" cy="135" fill="#fffaf5" r="2.5" stroke="#be9c77" stroke-width="0.8"></circle>
+</svg>
+<!-- Bottom Dried Botanical Branch -->
+<svg class="absolute -right-4 bottom-24 w-36 h-72 pointer-events-none z-10 text-[#d9c0a6]/70 opacity-75" fill="none" stroke="currentColor" viewbox="0 0 130 260">
+<path d="M110 250 C90 190, 70 120, 50 20" stroke="#c0a182" stroke-linecap="round" stroke-width="1.1"></path>
+<path d="M85 170 C65 145, 45 130, 20 120" stroke="#c0a182" stroke-linecap="round" stroke-width="0.8"></path>
+<path d="M70 110 C50 85, 30 70, 10 60" stroke="#c0a182" stroke-linecap="round" stroke-width="0.8"></path>
+<circle cx="50" cy="20" fill="#fffaf5" r="3" stroke="#b89571" stroke-width="0.8"></circle>
+<circle cx="44" cy="15" fill="#fffaf5" r="2.2" stroke="#b89571" stroke-width="0.8"></circle>
+<circle cx="20" cy="120" fill="#fffaf5" r="2.8" stroke="#b89571" stroke-width="0.8"></circle>
+<circle cx="10" cy="60" fill="#fffaf5" r="3" stroke="#b89571" stroke-width="0.8"></circle>
+<circle cx="34" cy="90" fill="#fffaf5" r="2.4" stroke="#b89571" stroke-width="0.8"></circle>
+</svg>
+<!-- Realistic 3D Gold Wax Seal positioned at flap edge (KN Monogram) -->
+<div class="absolute left-10 sm:left-14 top-1/3 -translate-y-6 z-30 wax-seal cursor-pointer group transition-transform duration-300 hover:scale-105 active:scale-95" title="Komalasari &amp; Najmudin Seal">
+<div class="wax-inner-ring">
+<span class="wax-monogram">KN</span>
+</div>
+</div>
+<!-- Top Header / Invitation Ceremony Tag -->
+<div class="relative z-20 flex flex-col items-end text-right pl-24 pt-2">
+<span class="font-['Bodoni_Moda'] text-[11px] tracking-[0.28em] uppercase text-[#775a19] font-medium">
+          WALIMATUL ‘URSY
+        </span>
+<p class="font-['Bodoni_Moda'] italic text-[13px] text-[#6d5b54] tracking-wide mt-0.5">
+          The Wedding Celebration of
+        </p>
+<div class="w-12 h-[1px] bg-[#d9c1c2] mt-2"></div>
+</div>
+<!-- Center Editorial Typography Section (Names & Date) -->
+<div class="relative z-20 flex flex-col items-end text-right pl-20 my-auto py-4">
+<!-- Intro caption -->
+<span class="font-['Manrope'] text-[9.5px] uppercase tracking-[0.24em] text-[#867274] font-semibold mb-2">
+          Together With Their Families
+        </span>
+<!-- Bride Name -->
+<h1 class="font-['Bodoni_Moda'] text-[34px] sm:text-[38px] leading-[1.1] text-primary tracking-[0.03em] font-normal uppercase">
+          Komalasari
+        </h1>
+<!-- Ampersand in soft romantic italic script -->
+<div class="py-1 pr-6">
+<span class="font-['Bodoni_Moda'] italic text-2xl sm:text-3xl text-[#775a19] font-normal">and</span>
+</div>
+<!-- Groom Name -->
+<h2 class="font-['Bodoni_Moda'] text-[34px] sm:text-[38px] leading-[1.1] text-primary tracking-[0.03em] font-normal uppercase">
+          Najmudin
+        </h2>
+<!-- Event Schedule Block -->
+<div class="mt-7 flex flex-col items-end border-t border-[#e8ded6] pt-3.5 w-full max-w-[240px]">
+<span class="font-['Manrope'] text-[9px] uppercase tracking-[0.26em] text-[#867274] font-medium">
+            Desember
+          </span>
+<div class="flex items-baseline gap-2 my-0.5">
+<span class="font-['Bodoni_Moda'] text-2xl font-normal text-primary tracking-wide">02</span>
+<span class="text-[#775a19] font-serif text-sm">•</span>
+<span class="font-['Bodoni_Moda'] text-2xl font-normal text-primary tracking-wide">06</span>
+</div>
+<span class="font-['Manrope'] text-[10px] tracking-[0.18em] text-[#534344] font-medium">2026</span>
+<p class="font-['Manrope'] text-[11px] text-[#6b5853] mt-2 italic flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-[#775a19]">place</span>
+            Cikancung, Kabupaten Bandung
+          </p>
+</div>
+</div>
+<!-- Recipient Card & CTA Button (Stationery Card with Wine Envelope Button) -->
+<div class="relative z-20 w-full flex flex-col items-center mt-auto pt-2 pb-1">
+<!-- Guest Badge / Ticket -->
+<div class="w-full bg-[#ffffff]/85 backdrop-blur-md border border-[#eee2d6] rounded-xl px-4 py-3 shadow-[0_4px_16px_rgba(60,3,17,0.06)] text-center mb-3">
+<p class="font-['Bodoni_Moda'] text-[10px] uppercase tracking-[0.2em] text-[#775a19] font-medium">
+            Kepada Yth. Bapak/Ibu/Saudara/i:
+          </p>
+<div class="my-1.5 inline-block px-3.5 py-1 bg-[#fbf6f0] rounded-full border border-[#eddcd0]">
+<h3 class="font-['Manrope'] text-[13px] font-semibold text-primary" id="guest-name-slot">
+              19. Reza di tempat
+            </h3>
+</div>
+<p class="font-['Manrope'] text-[10.5px] text-[#6d5b54] italic leading-tight">
+            Tanpa mengurangi rasa hormat, kami bermaksud mengundang Anda untuk hadir di hari bahagia kami.
+          </p>
+</div>
+<!-- Luxury Deep Burgundy Button with Wax-seal Gold Touch -->
+<button class="w-full py-3.5 px-6 rounded-full bg-gradient-to-r from-primary to-[#4e101d] text-[#ffedf0] font-['Bodoni_Moda'] tracking-[0.14em] uppercase text-[12px] font-medium flex items-center justify-center gap-2.5 shadow-[0_8px_20px_rgba(60,3,17,0.32)] border border-[#ffb2bb]/25 hover:brightness-110 active:scale-[0.98] transition-all duration-200" id="open-invitation-btn">
+<span class="material-symbols-outlined text-[18px] text-[#f6df95]">mail</span>
+<span>Buka Undangan</span>
+</button>
+</div>
+</section>
+<!-- UNVEILED INVITATION SUITE (Smoothly Revealed on Click) -->
+<div class="w-full flex flex-col hidden opacity-0 transition-opacity duration-700 bg-surface" id="unfolded-content">
+<!-- Quranic Blessing Verse -->
+<section class="w-full px-6 py-10 flex flex-col items-center text-center bg-[#faf4ed] border-b border-[#ebdcd0]">
+<div class="w-9 h-9 rounded-full bg-[#f3e5d7] flex items-center justify-center text-primary mb-3">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</div>
+<h3 class="font-['Bodoni_Moda'] text-lg text-primary mb-2 font-medium">
+          Bismillahirrahmannirrahiim
+        </h3>
+<p class="font-['Manrope'] text-xs text-[#534344] leading-relaxed max-w-xs mb-3 italic">
+          “Dan di antara tanda-tanda kebesaran-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang.”
+        </p>
+<span class="font-['Bodoni_Moda'] text-[11px] tracking-[0.16em] text-[#775a19] uppercase font-semibold">
+          QS. Ar-Rum: 21
+        </span>
+</section>
+<!-- Couple Bio Bento (Editorial Typography & Floral Monograms - No Photos) -->
+<section class="w-full px-6 py-8 flex flex-col gap-5">
+<div class="w-full text-center">
+<span class="font-['Bodoni_Moda'] text-[11px] text-[#775a19] uppercase tracking-[0.25em]">Mempelai</span>
+<h3 class="font-['Bodoni_Moda'] text-xl text-primary mt-0.5">Insan yang Berbahagia</h3>
+</div>
+<!-- Bride Card -->
+<div class="bg-surface-container-lowest border border-[#eedfd4] rounded-2xl p-6 shadow-sm flex flex-col items-center text-center relative overflow-hidden">
+<div class="w-14 h-14 rounded-full bg-[#faf1ea] border border-[#d8a846]/40 flex items-center justify-center text-primary font-['Bodoni_Moda'] text-xl font-bold mb-3 shadow-inner">
+            K
+          </div>
+<h4 class="font-['Bodoni_Moda'] text-xl text-primary uppercase tracking-wide">Komalasari</h4>
+<p class="font-['Manrope'] text-xs text-[#775a19] mt-1">
+            Putri tercinta dari <br/>
+<strong class="text-on-surface font-medium">Bapak Ya’yat Ruhiyat &amp; Ibu Iis</strong>
+</p>
+</div>
+<!-- Groom Card -->
+<div class="bg-surface-container-lowest border border-[#eedfd4] rounded-2xl p-6 shadow-sm flex flex-col items-center text-center relative overflow-hidden">
+<div class="w-14 h-14 rounded-full bg-[#faf1ea] border border-[#d8a846]/40 flex items-center justify-center text-primary font-['Bodoni_Moda'] text-xl font-bold mb-3 shadow-inner">
+            N
+          </div>
+<h4 class="font-['Bodoni_Moda'] text-xl text-primary uppercase tracking-wide">Najmudin</h4>
+<p class="font-['Manrope'] text-xs text-[#775a19] mt-1">
+            Putra tercinta dari <br/>
+<strong class="text-on-surface font-medium">Bapak Solahudin &amp; Ibu Aminah</strong>
+</p>
+</div>
+</section>
+<!-- Countdown Module -->
+<section class="w-full px-6 py-4">
+<div class="bg-[#faf3ec] border border-[#ebdcd0] rounded-2xl p-5 flex flex-col items-center text-center">
+<span class="font-['Bodoni_Moda'] text-[10px] text-[#775a19] uppercase tracking-[0.25em] mb-3">Menuju Hari Bahagia</span>
+<div class="grid grid-cols-4 gap-2.5 w-full max-w-xs">
+<div class="bg-white rounded-xl py-2.5 border border-[#eee0d6] flex flex-col items-center shadow-sm">
+<span class="font-['Bodoni_Moda'] text-lg text-primary font-semibold" id="timer-days">--</span>
+<span class="font-['Manrope'] text-[9.5px] uppercase tracking-wider text-[#867274]">Hari</span>
+</div>
+<div class="bg-white rounded-xl py-2.5 border border-[#eee0d6] flex flex-col items-center shadow-sm">
+<span class="font-['Bodoni_Moda'] text-lg text-primary font-semibold" id="timer-hours">--</span>
+<span class="font-['Manrope'] text-[9.5px] uppercase tracking-wider text-[#867274]">Jam</span>
+</div>
+<div class="bg-white rounded-xl py-2.5 border border-[#eee0d6] flex flex-col items-center shadow-sm">
+<span class="font-['Bodoni_Moda'] text-lg text-primary font-semibold" id="timer-mins">--</span>
+<span class="font-['Manrope'] text-[9.5px] uppercase tracking-wider text-[#867274]">Menit</span>
+</div>
+<div class="bg-white rounded-xl py-2.5 border border-[#eee0d6] flex flex-col items-center shadow-sm">
+<span class="font-['Bodoni_Moda'] text-lg text-primary font-semibold" id="timer-secs">--</span>
+<span class="font-['Manrope'] text-[9.5px] uppercase tracking-wider text-[#867274]">Detik</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Agenda / Events Schedule -->
+<section class="w-full px-6 py-6 flex flex-col gap-4">
+<div class="w-full text-center">
+<span class="font-['Bodoni_Moda'] text-[11px] text-[#775a19] uppercase tracking-[0.25em]">Agenda Acara</span>
+<h3 class="font-['Bodoni_Moda'] text-xl text-primary mt-0.5">Waktu &amp; Tempat</h3>
+</div>
+<!-- Akad Nikah -->
+<article class="bg-white border border-[#eedfd4] rounded-2xl p-5 shadow-sm flex flex-col">
+<div class="flex items-center justify-between mb-2">
+<span class="font-['Bodoni_Moda'] text-xs uppercase tracking-wider text-primary font-semibold">Akad Nikah</span>
+<span class="px-2.5 py-0.5 rounded-full bg-[#fcedd7] text-[#775a19] text-[10px] font-medium tracking-wide">
+              Keluarga &amp; Kerabat
+            </span>
+</div>
+<h4 class="font-['Bodoni_Moda'] text-base text-on-surface font-medium">Rabu, 02 Desember 2026</h4>
+<p class="font-['Manrope'] text-xs text-[#775a19] mt-0.5 mb-3">Pukul 08.00 WIB – Selesai</p>
+<div class="bg-[#faf4ee] rounded-xl p-3 flex items-start gap-2 border border-[#f0e4db]">
+<span class="material-symbols-outlined text-primary text-[17px] mt-0.5">location_on</span>
+<p class="font-['Manrope'] text-xs text-[#4e4639]">
+              Kp. Cirungki RT 02 RW 04 Desa Hegarmanah, Kec. Cikancung, Kab. Bandung
+            </p>
+</div>
+</article>
+<!-- Resepsi Pernikahan -->
+<article class="bg-white border border-[#eedfd4] rounded-2xl p-5 shadow-sm flex flex-col">
+<div class="flex items-center justify-between mb-2">
+<span class="font-['Bodoni_Moda'] text-xs uppercase tracking-wider text-primary font-semibold">Resepsi Pernikahan</span>
+<span class="px-2.5 py-0.5 rounded-full bg-[#ffd9dc] text-[#581825] text-[10px] font-medium tracking-wide">
+              Sesi Umum
+            </span>
+</div>
+<h4 class="font-['Bodoni_Moda'] text-base text-on-surface font-medium">Minggu, 06 Desember 2026</h4>
+<p class="font-['Manrope'] text-xs text-[#775a19] mt-0.5 mb-3">Pukul 10.00 – 14.00 WIB</p>
+<div class="bg-[#faf4ee] rounded-xl p-3 flex items-start gap-2 border border-[#f0e4db]">
+<span class="material-symbols-outlined text-primary text-[17px] mt-0.5">location_on</span>
+<p class="font-['Manrope'] text-xs text-[#4e4639]">
+              Kp. Cirungki RT 02 RW 04 Desa Hegarmanah, Kec. Cikancung, Kab. Bandung
+            </p>
+</div>
+<a class="w-full mt-4 py-2.5 bg-primary text-white rounded-full text-center font-['Manrope'] text-xs tracking-wide shadow-sm flex items-center justify-center gap-1.5 hover:bg-[#4d101c]" href="https://maps.google.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">directions</span>
+<span>Buka Petunjuk Google Maps</span>
+</a>
+</article>
+</section>
+<!-- Extended Family / Turut Mengundang -->
+<section class="w-full px-6 py-3">
+<div class="bg-[#faf4ed] border border-[#ebdcd0] rounded-2xl p-5 text-center">
+<span class="font-['Bodoni_Moda'] text-[10px] text-[#775a19] uppercase tracking-[0.25em] mb-2 block">Turut Mengundang</span>
+<div class="flex flex-col gap-1 text-[#534344] font-['Manrope'] text-xs">
+<p class="font-medium text-primary">K.H Dedi Supriadi</p>
+<p>Keluarga Besar Ust Ade Arifin &amp; Ibu Yoyom</p>
+<p>Keluarga Besar Bapak Koko &amp; Ibu Memeh</p>
+<p>Bapak Jaelani &amp; Ibu Imas</p>
+</div>
+</div>
+</section>
+<!-- RSVP Form -->
+<section class="w-full px-6 py-6">
+<div class="bg-white border border-[#eedfd4] rounded-2xl p-5 shadow-sm flex flex-col">
+<div class="text-center mb-4">
+<span class="font-['Bodoni_Moda'] text-[11px] text-[#775a19] uppercase tracking-[0.25em]">Konfirmasi</span>
+<h3 class="font-['Bodoni_Moda'] text-xl text-primary mt-0.5">Kehadiran (RSVP)</h3>
+</div>
+<form class="flex flex-col gap-3.5" id="rsvp-form" onsubmit="event.preventDefault(); submitRsvp();">
+<div>
+<label class="font-['Bodoni_Moda'] text-[10.5px] text-[#775a19] uppercase tracking-wider block mb-1">Nama Lengkap</label>
+<input class="w-full px-3.5 py-2.5 rounded-xl bg-[#faf5f0] border border-[#eedfd4] text-on-surface text-xs focus:outline-none focus:ring-1 focus:ring-primary" id="rsvp-name" required="" type="text" value="19. Reza di tempat"/>
+</div>
+<div>
+<label class="font-['Bodoni_Moda'] text-[10.5px] text-[#775a19] uppercase tracking-wider block mb-1">Status Kehadiran</label>
+<div class="grid grid-cols-3 gap-2">
+<button class="rsvp-pill py-2 px-1 rounded-xl text-center text-xs font-medium bg-primary text-white transition-colors" onclick="selectPresence(this, 'Hadir')" type="button">
+                  Hadir
+                </button>
+<button class="rsvp-pill py-2 px-1 rounded-xl text-center text-xs bg-[#faf5f0] border border-[#eedfd4] text-[#534344] transition-colors" onclick="selectPresence(this, 'Ragu')" type="button">
+                  Ragu-ragu
+                </button>
+<button class="rsvp-pill py-2 px-1 rounded-xl text-center text-xs bg-[#faf5f0] border border-[#eedfd4] text-[#534344] transition-colors" onclick="selectPresence(this, 'Tidak')" type="button">
+                  Tidak
+                </button>
+</div>
+</div>
+<div>
+<label class="font-['Bodoni_Moda'] text-[10.5px] text-[#775a19] uppercase tracking-wider block mb-1">Ucapan &amp; Doa Restu</label>
+<textarea class="w-full px-3.5 py-2.5 rounded-xl bg-[#faf5f0] border border-[#eedfd4] text-on-surface text-xs focus:outline-none focus:ring-1 focus:ring-primary" id="rsvp-message" placeholder="Tuliskan ucapan selamat &amp; doa restu..." rows="3"></textarea>
+</div>
+<button class="w-full mt-1 py-3 rounded-full bg-primary text-white font-['Bodoni_Moda'] text-xs tracking-wider uppercase shadow-md hover:bg-[#4d101c] transition-colors flex items-center justify-center gap-1.5" type="submit">
+<span class="material-symbols-outlined text-[17px]">send</span>
+<span>Kirim Konfirmasi</span>
+</button>
+</form>
+<div class="hidden mt-3 p-3 rounded-xl bg-[#faf4ee] border border-[#e8d8cd] text-center text-xs text-primary font-medium" id="rsvp-toast">
+            Terima kasih atas konfirmasi dan doa restunya!
+          </div>
+</div>
+</section>
+<!-- Digital Envelope / Amplop Digital -->
+<section class="w-full px-6 py-4 flex flex-col gap-3">
+<div class="text-center">
+<span class="font-['Bodoni_Moda'] text-[11px] text-[#775a19] uppercase tracking-[0.25em]">Tanda Kasih</span>
+<h3 class="font-['Bodoni_Moda'] text-xl text-primary mt-0.5">Amplop Digital</h3>
+<p class="font-['Manrope'] text-xs text-[#6d5b54] mt-1 max-w-xs mx-auto italic">
+            Doa restu Anda merupakan karunia terindah bagi kami. Namun jika berkenan memberikan tanda kasih:
+          </p>
+</div>
+<div class="bg-white border border-[#eedfd4] rounded-2xl p-5 shadow-sm flex flex-col">
+<div class="flex items-center justify-between mb-2">
+<span class="font-['Bodoni_Moda'] text-sm text-primary font-bold tracking-widest">BANK BCA</span>
+<span class="material-symbols-outlined text-primary text-xl">credit_card</span>
+</div>
+<p class="text-base text-primary tracking-widest my-1 font-mono font-semibold">
+            5271 8904 21
+          </p>
+<span class="text-xs text-[#775a19] mb-3">a.n Komalasari</span>
+<button class="w-full py-2.5 rounded-full bg-[#faf5f0] border border-[#eedfd4] text-primary text-xs font-medium flex items-center justify-center gap-1.5 shadow-sm transition-transform active:scale-95" onclick="copyToClipboard('5271890421', this)">
+<span class="material-symbols-outlined text-base">content_copy</span>
+<span>Salin Nomor Rekening</span>
+</button>
+</div>
+</section>
+<!-- Closing Footer -->
+<footer class="w-full px-6 py-12 flex flex-col items-center text-center bg-[#faf4ed] border-t border-[#ebdcd0]">
+<div class="w-8 h-8 rounded-full bg-[#f1e2d4] flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</div>
+<p class="font-['Manrope'] text-xs text-[#6d5b54] max-w-xs mb-3 italic">
+          Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.
+        </p>
+<h4 class="font-['Bodoni_Moda'] text-lg text-primary uppercase tracking-wide">
+          Komalasari &amp; Najmudin
+        </h4>
+<span class="font-['Bodoni_Moda'] text-[10px] text-[#775a19] tracking-[0.2em] uppercase mt-1">
+          Beserta Keluarga Besar
+        </span>
+</footer>
+</div>
+</main>
+<script>
+    // Reveal Suite on Buka Undangan Click
+    document.getElementById('open-invitation-btn').addEventListener('click', function () {
+      const unfolded = document.getElementById('unfolded-content');
+      const audio = document.getElementById('invitation-audio');
+      const audioIcon = document.getElementById('audio-icon');
+
+      unfolded.classList.remove('hidden');
+      setTimeout(() => {
+        unfolded.classList.remove('opacity-0');
+        unfolded.scrollIntoView({ behavior: 'smooth' });
+      }, 50);
+
+      if (audio) {
+        audio.play().then(() => {
+          audioIcon.innerText = 'music_note';
+        }).catch(() => {
+          audioIcon.innerText = 'music_off';
+        });
+      }
+    });
+
+    // Floating Audio Controller Toggle
+    document.getElementById('audio-toggle-btn').addEventListener('click', function () {
+      const audio = document.getElementById('invitation-audio');
+      const audioIcon = document.getElementById('audio-icon');
+      if (audio.paused) {
+        audio.play();
+        audioIcon.innerText = 'music_note';
+      } else {
+        audio.pause();
+        audioIcon.innerText = 'music_off';
+      }
+    });
+
+    // Interactive RSVP Presence Selector
+    function selectPresence(btn, val) {
+      const buttons = document.querySelectorAll('.rsvp-pill');
+      buttons.forEach(b => {
+        b.className = 'rsvp-pill py-2 px-1 rounded-xl text-center text-xs bg-[#faf5f0] border border-[#eedfd4] text-[#534344] transition-colors';
+      });
+      btn.className = 'rsvp-pill py-2 px-1 rounded-xl text-center text-xs font-medium bg-primary text-white transition-colors';
+    }
+
+    // RSVP Submit feedback
+    function submitRsvp() {
+      const toast = document.getElementById('rsvp-toast');
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 4000);
+    }
+
+    // Digital Envelope Copy Clipboard
+    function copyToClipboard(text, btnElement) {
+      navigator.clipboard.writeText(text).then(() => {
+        const originalHTML = btnElement.innerHTML;
+        btnElement.innerHTML = '<span class="material-symbols-outlined text-base">check</span><span>Tersalin!</span>';
+        btnElement.classList.add('bg-primary', 'text-white');
+        setTimeout(() => {
+          btnElement.innerHTML = originalHTML;
+          btnElement.classList.remove('bg-primary', 'text-white');
+        }, 2500);
+      });
+    }
+
+    // Countdown Timer logic to Dec 2, 2026
+    (function initTimer() {
+      const target = new Date('2026-12-02T08:00:00+07:00').getTime();
+      function update() {
+        const now = new Date().getTime();
+        const diff = target - now;
+        if (diff > 0) {
+          const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+          const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+          const elD = document.getElementById('timer-days');
+          const elH = document.getElementById('timer-hours');
+          const elM = document.getElementById('timer-mins');
+          const elS = document.getElementById('timer-secs');
+
+          if (elD) elD.innerText = days;
+          if (elH) elH.innerText = String(hours).padStart(2, '0');
+          if (elM) elM.innerText = String(mins).padStart(2, '0');
+          if (elS) elS.innerText = String(secs).padStart(2, '0');
+        }
+      }
+      setInterval(update, 1000);
+      update();
+    })();
+
+    // Dynamic guest name parsing from ?to= or ?u=
+    (function handleQueryParamGuest() {
+      const params = new URLSearchParams(window.location.search);
+      const guest = params.get('to') || params.get('u');
+      if (guest) {
+        const slot = document.getElementById('guest-name-slot');
+        if (slot) slot.innerText = decodeURIComponent(guest);
+        const input = document.getElementById('rsvp-name');
+        if (input) input.value = decodeURIComponent(guest);
+      }
+    })();
+  </script>
+</body></html>
